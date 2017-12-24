@@ -97,3 +97,51 @@ Stack trace:
 #1 F:\phpStudy\WWW\DB\index.php(10): Waitmoonman\Database\DB::table('users')
 #2 {main}
   thrown in F:\phpStudy\WWW\DB\src\DB.php on line 37
+[24-Dec-2017 12:45:31 UTC] PHP Notice:  Array to string conversion in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 42
+[24-Dec-2017 12:45:31 UTC] PHP Stack trace:
+[24-Dec-2017 12:45:31 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[24-Dec-2017 12:45:31 UTC] PHP   2. Waitmoonman\Database\Query\Builder->delete() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 12:45:31 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 12:45:31 UTC] PHP   4. Waitmoonman\Database\Foundation\Delete->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:104
+[24-Dec-2017 12:45:31 UTC] PHP   5. Waitmoonman\Database\Foundation\Delete->toSql() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:27
+[24-Dec-2017 12:45:31 UTC] PHP   6. Waitmoonman\Database\Foundation\Delete->compileColumns() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:20
+[24-Dec-2017 12:45:51 UTC] PHP Notice:  Array to string conversion in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 43
+[24-Dec-2017 12:45:51 UTC] PHP Stack trace:
+[24-Dec-2017 12:45:51 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[24-Dec-2017 12:45:51 UTC] PHP   2. Waitmoonman\Database\Query\Builder->delete() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 12:45:51 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 12:45:51 UTC] PHP   4. Waitmoonman\Database\Foundation\Delete->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:104
+[24-Dec-2017 12:45:51 UTC] PHP   5. Waitmoonman\Database\Foundation\Delete->toSql() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:27
+[24-Dec-2017 12:45:51 UTC] PHP   6. Waitmoonman\Database\Foundation\Delete->compileColumns() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:20
+[24-Dec-2017 12:46:04 UTC] PHP Notice:  Array to string conversion in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 43
+[24-Dec-2017 12:46:04 UTC] PHP Stack trace:
+[24-Dec-2017 12:46:04 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[24-Dec-2017 12:46:04 UTC] PHP   2. Waitmoonman\Database\Query\Builder->delete() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 12:46:04 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 12:46:04 UTC] PHP   4. Waitmoonman\Database\Foundation\Delete->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:104
+[24-Dec-2017 12:46:04 UTC] PHP   5. Waitmoonman\Database\Foundation\Delete->toSql() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:27
+[24-Dec-2017 12:46:04 UTC] PHP   6. Waitmoonman\Database\Foundation\Delete->compileColumns() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:20
+[24-Dec-2017 12:46:29 UTC] PHP Notice:  Array to string conversion in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 43
+[24-Dec-2017 12:46:29 UTC] PHP Stack trace:
+[24-Dec-2017 12:46:29 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[24-Dec-2017 12:46:29 UTC] PHP   2. Waitmoonman\Database\Query\Builder->delete() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 12:46:29 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 12:46:29 UTC] PHP   4. Waitmoonman\Database\Foundation\Delete->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:104
+[24-Dec-2017 12:46:29 UTC] PHP   5. Waitmoonman\Database\Foundation\Delete->toSql() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:27
+[24-Dec-2017 12:46:29 UTC] PHP   6. Waitmoonman\Database\Foundation\Delete->compileColumns() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:20
+[24-Dec-2017 12:46:30 UTC] PHP Notice:  Array to string conversion in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 44
+[24-Dec-2017 12:46:30 UTC] PHP Stack trace:
+[24-Dec-2017 12:46:30 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[24-Dec-2017 12:46:30 UTC] PHP   2. Waitmoonman\Database\Query\Builder->delete() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 12:46:30 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 12:46:30 UTC] PHP   4. Waitmoonman\Database\Foundation\Delete->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:104
+[24-Dec-2017 12:46:30 UTC] PHP   5. Waitmoonman\Database\Foundation\Delete->toSql() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:27
+[24-Dec-2017 12:46:30 UTC] PHP   6. Waitmoonman\Database\Foundation\Delete->compileColumns() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:20
+[24-Dec-2017 12:46:32 UTC] PHP Notice:  Array to string conversion in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 44
+[24-Dec-2017 12:46:32 UTC] PHP Stack trace:
+[24-Dec-2017 12:46:32 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[24-Dec-2017 12:46:32 UTC] PHP   2. Waitmoonman\Database\Query\Builder->delete() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 12:46:32 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 12:46:32 UTC] PHP   4. Waitmoonman\Database\Foundation\Delete->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:104
+[24-Dec-2017 12:46:32 UTC] PHP   5. Waitmoonman\Database\Foundation\Delete->toSql() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:27
+[24-Dec-2017 12:46:32 UTC] PHP   6. Waitmoonman\Database\Foundation\Delete->compileColumns() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:20

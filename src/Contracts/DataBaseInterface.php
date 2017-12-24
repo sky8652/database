@@ -2,7 +2,10 @@
 
 namespace Waitmoonman\Database\Contracts;
 
+use Waitmoonman\Database\Query\Builder;
+
 interface DataBaseInterface
 {
-    public function table();
+    public function toSql();
+    public function build($param = []);
 }

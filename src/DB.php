@@ -2,10 +2,10 @@
 
 namespace Waitmoonman\Database;
 
-use Waitmoonman\Database\Contracts\DataBaseInterface;
+
 use Waitmoonman\Database\Exceptions\QueryException;
-use Waitmoonman\Database\Foundation\Connection;
 use Waitmoonman\Database\Query\Builder;
+use Waitmoonman\Database\Query\Connection;
 
 class DB
 {
