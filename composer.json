@@ -1,0 +1,24 @@
+{
+    "name": "waitmoonman/db",
+    "description": "this is a database operation class, query the constructor!",
+    "keywords": ["waitmoonman", "db", "database", "Query Builder", "mysql", "PDO", "数据库", "数据库操作类", "查询构造器"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "WaitMoonMan",
+            "email": "1033404553@qq.com",
+            "homepage": "https://waitmoonman.github.io"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6",
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Waitmoonman\\Database\\": "src/"
+        }
+    }
+}
