@@ -145,3 +145,42 @@ Stack trace:
 [24-Dec-2017 12:46:32 UTC] PHP   4. Waitmoonman\Database\Foundation\Delete->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:104
 [24-Dec-2017 12:46:32 UTC] PHP   5. Waitmoonman\Database\Foundation\Delete->toSql() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:27
 [24-Dec-2017 12:46:32 UTC] PHP   6. Waitmoonman\Database\Foundation\Delete->compileColumns() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:20
+[24-Dec-2017 14:14:55 UTC] PHP Fatal error:  Uncaught Waitmoonman\Database\Exceptions\QueryException: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+ in F:\phpStudy\WWW\DB\src\Query\Connection.php:37
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\Query\Connection.php(16): Waitmoonman\Database\Query\Connection->createPdo('mysql:host=127....', Array)
+#1 F:\phpStudy\WWW\DB\src\DB.php(20): Waitmoonman\Database\Query\Connection->connect(Array)
+#2 F:\phpStudy\WWW\DB\index.php(7): Waitmoonman\Database\DB::addConnection(Array)
+#3 {main}
+  thrown in F:\phpStudy\WWW\DB\src\Query\Connection.php on line 37
+[24-Dec-2017 14:18:25 UTC] PHP Notice:  Undefined variable: columns in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 55
+[24-Dec-2017 14:18:25 UTC] PHP Stack trace:
+[24-Dec-2017 14:18:25 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[24-Dec-2017 14:18:25 UTC] PHP   2. Waitmoonman\Database\Query\Builder->delete() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 14:18:25 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 14:18:25 UTC] PHP   4. Waitmoonman\Database\Foundation\Delete->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:104
+[24-Dec-2017 14:18:25 UTC] PHP   5. Waitmoonman\Database\Foundation\Delete->toSql() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:29
+[24-Dec-2017 14:18:25 UTC] PHP   6. Waitmoonman\Database\Foundation\Delete->compileColumns() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:20
+[24-Dec-2017 14:18:38 UTC] PHP Notice:  Undefined variable: columns in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 55
+[24-Dec-2017 14:18:38 UTC] PHP Stack trace:
+[24-Dec-2017 14:18:38 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[24-Dec-2017 14:18:38 UTC] PHP   2. Waitmoonman\Database\Query\Builder->delete() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 14:18:38 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 14:18:38 UTC] PHP   4. Waitmoonman\Database\Foundation\Delete->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:104
+[24-Dec-2017 14:18:38 UTC] PHP   5. Waitmoonman\Database\Foundation\Delete->toSql() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:29
+[24-Dec-2017 14:18:38 UTC] PHP   6. Waitmoonman\Database\Foundation\Delete->compileColumns() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:20
+[24-Dec-2017 14:20:57 UTC] PHP Notice:  Undefined variable: columns in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 55
+[24-Dec-2017 14:20:57 UTC] PHP Stack trace:
+[24-Dec-2017 14:20:57 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[24-Dec-2017 14:20:57 UTC] PHP   2. Waitmoonman\Database\Query\Builder->delete() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 14:20:57 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[24-Dec-2017 14:20:57 UTC] PHP   4. Waitmoonman\Database\Foundation\Delete->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:104
+[24-Dec-2017 14:20:57 UTC] PHP   5. Waitmoonman\Database\Foundation\Delete->toSql() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:29
+[24-Dec-2017 14:20:57 UTC] PHP   6. Waitmoonman\Database\Foundation\Delete->compileColumns() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:20
+[24-Dec-2017 14:26:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Waitmoonman\Database\Foundation\Delete::compileColumns() in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:20
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\Foundation\Grammar.php(29): Waitmoonman\Database\Foundation\Grammar->toSql()
+#1 F:\phpStudy\WWW\DB\src\Query\Builder.php(104): Waitmoonman\Database\Foundation\Grammar->build()
+#2 F:\phpStudy\WWW\DB\index.php(10): Waitmoonman\Database\Query\Builder->__call('delete', Array)
+#3 {main}
+  thrown in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 20

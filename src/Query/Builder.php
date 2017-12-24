@@ -17,6 +17,7 @@ class Builder
     public $limit;
     public $orders;
     public $wheres = [];
+    public $binds = [];
 
     public function __construct(PDO $dbh)
     {

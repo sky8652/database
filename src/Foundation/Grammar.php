@@ -17,7 +17,9 @@ abstract class Grammar implements DataBaseInterface
     public function toSql()
     {
         // TODO 动态拼接 update delete insert into
-        $sql = $this->compileColumns();
+        $sql = $this->compileStart();
+
+        $sql .= $this->compileWheres();
 
         return $sql;
     }
@@ -25,23 +27,53 @@ abstract class Grammar implements DataBaseInterface
     public function build($param = [])
     {
         $sql = $this->toSql();
+
+        $results = $this->builder->execute($sql, $this->builder->binds);
+        var_dump($sql, $results);
     }
 
     protected function compileWheres()
     {
-
-    }
-
-    protected function compileColumns()
-    {
-        if (is_null($this->builder->columns) || in_array('*', $this->builder->columns)) {
-            $columns = '*';
-        } else {
-            $columns = explode(' ', $this->builder->columns);
+        var_dump($this->builder);
+        if (empty($this->builder->wheres)) {
+            return '';
         }
 
-        $select = "select " . $columns;
+        // wheres[''] -> 'column', 'operator', 'value'
+        $wheres = 'where ';
+        foreach ($this->builder->wheres as $where) {
+            $wheres .= $where['column'] . ' ' . $where['operator'] . ' ? and ';
+            $this->builder->binds[] = $where['value'];
+        }
 
-        return $select;
+        $wheres = rtrim($wheres, 'and ');
+
+        return $wheres;
+    }
+
+    protected function compileStart()
+    {
+        $operate = strtolower(basename(static::class));
+
+        $sql = '';
+        switch ($operate) {
+            case 'insert':
+                $sql = 'insert into ';
+                break;
+            case 'update':
+                $sql = 'update ';
+                break;
+            case 'delete':
+                $sql = 'delete from ';
+                break;
+            default:
+                $sql = 'insert into ';
+                break;
+        }
+
+        $sql .= "`{$this->builder->from}` ";
+
+
+        return $sql;
     }
 }
