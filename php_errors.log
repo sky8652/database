@@ -1,0 +1,99 @@
+[24-Dec-2017 09:45:25 UTC] PHP Fatal error:  Uncaught Error: Class 'Waitmoonman\Database\DB' not found in F:\phpStudy\WWW\DB\index.php:6
+Stack trace:
+#0 {main}
+  thrown in F:\phpStudy\WWW\DB\index.php on line 6
+[24-Dec-2017 09:45:42 UTC] PHP Notice:  Undefined variable: host in F:\phpStudy\WWW\DB\src\Foundation\Connection.php on line 25
+[24-Dec-2017 09:45:42 UTC] PHP Stack trace:
+[24-Dec-2017 09:45:42 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[24-Dec-2017 09:45:42 UTC] PHP   2. Waitmoonman\Database\DB::addConnection() F:\phpStudy\WWW\DB\index.php:7
+[24-Dec-2017 09:45:42 UTC] PHP   3. Waitmoonman\Database\Foundation\Connection->connect() F:\phpStudy\WWW\DB\src\DB.php:20
+[24-Dec-2017 09:45:42 UTC] PHP   4. Waitmoonman\Database\Foundation\Connection->getDsn() F:\phpStudy\WWW\DB\src\Foundation\Connection.php:14
+[24-Dec-2017 09:45:42 UTC] PHP Notice:  Undefined variable: database in F:\phpStudy\WWW\DB\src\Foundation\Connection.php on line 25
+[24-Dec-2017 09:45:42 UTC] PHP Stack trace:
+[24-Dec-2017 09:45:42 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[24-Dec-2017 09:45:42 UTC] PHP   2. Waitmoonman\Database\DB::addConnection() F:\phpStudy\WWW\DB\index.php:7
+[24-Dec-2017 09:45:42 UTC] PHP   3. Waitmoonman\Database\Foundation\Connection->connect() F:\phpStudy\WWW\DB\src\DB.php:20
+[24-Dec-2017 09:45:42 UTC] PHP   4. Waitmoonman\Database\Foundation\Connection->getDsn() F:\phpStudy\WWW\DB\src\Foundation\Connection.php:14
+[24-Dec-2017 09:45:42 UTC] PHP Notice:  Undefined index: username in F:\phpStudy\WWW\DB\src\Foundation\Connection.php on line 31
+[24-Dec-2017 09:45:42 UTC] PHP Stack trace:
+[24-Dec-2017 09:45:42 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[24-Dec-2017 09:45:42 UTC] PHP   2. Waitmoonman\Database\DB::addConnection() F:\phpStudy\WWW\DB\index.php:7
+[24-Dec-2017 09:45:42 UTC] PHP   3. Waitmoonman\Database\Foundation\Connection->connect() F:\phpStudy\WWW\DB\src\DB.php:20
+[24-Dec-2017 09:45:42 UTC] PHP   4. Waitmoonman\Database\Foundation\Connection->createPdo() F:\phpStudy\WWW\DB\src\Foundation\Connection.php:16
+[24-Dec-2017 09:45:42 UTC] PHP Notice:  Undefined index: password in F:\phpStudy\WWW\DB\src\Foundation\Connection.php on line 31
+[24-Dec-2017 09:45:42 UTC] PHP Stack trace:
+[24-Dec-2017 09:45:42 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[24-Dec-2017 09:45:42 UTC] PHP   2. Waitmoonman\Database\DB::addConnection() F:\phpStudy\WWW\DB\index.php:7
+[24-Dec-2017 09:45:42 UTC] PHP   3. Waitmoonman\Database\Foundation\Connection->connect() F:\phpStudy\WWW\DB\src\DB.php:20
+[24-Dec-2017 09:45:42 UTC] PHP   4. Waitmoonman\Database\Foundation\Connection->createPdo() F:\phpStudy\WWW\DB\src\Foundation\Connection.php:16
+[24-Dec-2017 09:45:43 UTC] PHP Fatal error:  Uncaught Waitmoonman\Database\Exceptions\QueryException: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in F:\phpStudy\WWW\DB\src\Foundation\Connection.php:37
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\Foundation\Connection.php(16): Waitmoonman\Database\Foundation\Connection->createPdo('mysql:host=;dbn...', Array)
+#1 F:\phpStudy\WWW\DB\src\DB.php(20): Waitmoonman\Database\Foundation\Connection->connect(Array)
+#2 F:\phpStudy\WWW\DB\index.php(7): Waitmoonman\Database\DB::addConnection(Array)
+#3 {main}
+  thrown in F:\phpStudy\WWW\DB\src\Foundation\Connection.php on line 37
+[24-Dec-2017 09:45:54 UTC] PHP Fatal error:  Uncaught Waitmoonman\Database\Exceptions\QueryException: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) in F:\phpStudy\WWW\DB\src\Foundation\Connection.php:37
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\Foundation\Connection.php(16): Waitmoonman\Database\Foundation\Connection->createPdo('mysql:host=127....', Array)
+#1 F:\phpStudy\WWW\DB\src\DB.php(20): Waitmoonman\Database\Foundation\Connection->connect(Array)
+#2 F:\phpStudy\WWW\DB\index.php(7): Waitmoonman\Database\DB::addConnection(Array)
+#3 {main}
+  thrown in F:\phpStudy\WWW\DB\src\Foundation\Connection.php on line 37
+[24-Dec-2017 09:46:04 UTC] PHP Notice:  Accessing static property Waitmoonman\Database\DB::$dbh as non static in F:\phpStudy\WWW\DB\src\DB.php on line 20
+[24-Dec-2017 09:46:04 UTC] PHP Stack trace:
+[24-Dec-2017 09:46:04 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[24-Dec-2017 09:46:04 UTC] PHP   2. Waitmoonman\Database\DB::addConnection() F:\phpStudy\WWW\DB\index.php:7
+[24-Dec-2017 09:46:04 UTC] PHP Fatal error:  Uncaught Waitmoonman\Database\Exceptions\QueryException: 请先配置数据库连接 in F:\phpStudy\WWW\DB\src\DB.php:47
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\DB.php(25): Waitmoonman\Database\DB::checkConnect()
+#1 F:\phpStudy\WWW\DB\index.php(10): Waitmoonman\Database\DB::table('users')
+#2 {main}
+  thrown in F:\phpStudy\WWW\DB\src\DB.php on line 47
+[24-Dec-2017 09:46:25 UTC] PHP Fatal error:  Uncaught Error: Access to undeclared static property: Waitmoonman\Database\DB::$dbh in F:\phpStudy\WWW\DB\src\DB.php:46
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\DB.php(25): Waitmoonman\Database\DB::checkConnect()
+#1 F:\phpStudy\WWW\DB\index.php(10): Waitmoonman\Database\DB::table('users')
+#2 {main}
+  thrown in F:\phpStudy\WWW\DB\src\DB.php on line 46
+[24-Dec-2017 09:52:30 UTC] PHP Fatal error:  Uncaught Error: Access to undeclared static property: Waitmoonman\Database\DB::$dbh in F:\phpStudy\WWW\DB\src\DB.php:46
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\DB.php(25): Waitmoonman\Database\DB::checkConnect()
+#1 F:\phpStudy\WWW\DB\index.php(10): Waitmoonman\Database\DB::table('users')
+#2 {main}
+  thrown in F:\phpStudy\WWW\DB\src\DB.php on line 46
+[24-Dec-2017 09:52:31 UTC] PHP Fatal error:  Uncaught Error: Access to undeclared static property: Waitmoonman\Database\DB::$dbh in F:\phpStudy\WWW\DB\src\DB.php:46
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\DB.php(25): Waitmoonman\Database\DB::checkConnect()
+#1 F:\phpStudy\WWW\DB\index.php(10): Waitmoonman\Database\DB::table('users')
+#2 {main}
+  thrown in F:\phpStudy\WWW\DB\src\DB.php on line 46
+[24-Dec-2017 09:53:33 UTC] PHP Fatal error:  Uncaught Error: Access to undeclared static property: Waitmoonman\Database\DB::$dbh in F:\phpStudy\WWW\DB\src\DB.php:47
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\DB.php(25): Waitmoonman\Database\DB::checkConnect()
+#1 F:\phpStudy\WWW\DB\index.php(10): Waitmoonman\Database\DB::table('users')
+#2 {main}
+  thrown in F:\phpStudy\WWW\DB\src\DB.php on line 47
+[24-Dec-2017 09:53:34 UTC] PHP Fatal error:  Uncaught Error: Access to undeclared static property: Waitmoonman\Database\DB::$dbh in F:\phpStudy\WWW\DB\src\DB.php:47
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\DB.php(25): Waitmoonman\Database\DB::checkConnect()
+#1 F:\phpStudy\WWW\DB\index.php(10): Waitmoonman\Database\DB::table('users')
+#2 {main}
+  thrown in F:\phpStudy\WWW\DB\src\DB.php on line 47
+[24-Dec-2017 09:54:45 UTC] PHP Fatal error:  Uncaught Error: Access to undeclared static property: Waitmoonman\Database\DB::$dbh in F:\phpStudy\WWW\DB\src\DB.php:47
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\DB.php(25): Waitmoonman\Database\DB::checkConnect()
+#1 F:\phpStudy\WWW\DB\index.php(10): Waitmoonman\Database\DB::table('users')
+#2 {main}
+  thrown in F:\phpStudy\WWW\DB\src\DB.php on line 47
+[24-Dec-2017 09:55:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Waitmoonman\Database\DB::get() in F:\phpStudy\WWW\DB\src\DB.php:28
+Stack trace:
+#0 F:\phpStudy\WWW\DB\index.php(10): Waitmoonman\Database\DB::table('users')
+#1 {main}
+  thrown in F:\phpStudy\WWW\DB\src\DB.php on line 28
+[24-Dec-2017 10:00:28 UTC] PHP Fatal error:  Uncaught Waitmoonman\Database\Exceptions\QueryException: 请先配置数据库连接 in F:\phpStudy\WWW\DB\src\DB.php:37
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\DB.php(25): Waitmoonman\Database\DB::checkConnect()
+#1 F:\phpStudy\WWW\DB\index.php(10): Waitmoonman\Database\DB::table('users')
+#2 {main}
+  thrown in F:\phpStudy\WWW\DB\src\DB.php on line 37
