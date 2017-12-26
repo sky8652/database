@@ -8,6 +8,7 @@ use Waitmoonman\Database\Query\Builder;
 abstract class Grammar implements DataBaseInterface
 {
     protected $builder;
+    protected $params;
 
     public function __construct(Builder $builder)
     {
@@ -26,15 +27,21 @@ abstract class Grammar implements DataBaseInterface
 
     public function build($param = [])
     {
-        $sql = $this->toSql();
+        $this->params = $param;
 
-        $results = $this->builder->execute($sql, $this->builder->binds);
-        var_dump($sql, $results);
+        // 拼接原生 SQL
+        $sql = $this->toSql();
+        // 获取预处理 SQL 的参数
+        $param = $this->compileParams($param);
+
+        var_dump($sql, $param);
+        $results = $this->builder->execute($sql, $param);
+
+        var_dump($results);
     }
 
     protected function compileWheres()
     {
-        var_dump($this->builder);
         if (empty($this->builder->wheres)) {
             return '';
         }
@@ -51,29 +58,21 @@ abstract class Grammar implements DataBaseInterface
         return $wheres;
     }
 
+    /**
+     * operate $this->table
+     */
     protected function compileStart()
     {
-        $operate = strtolower(basename(static::class));
+        return ;
+    }
 
-        $sql = '';
-        switch ($operate) {
-            case 'insert':
-                $sql = 'insert into ';
-                break;
-            case 'update':
-                $sql = 'update ';
-                break;
-            case 'delete':
-                $sql = 'delete from ';
-                break;
-            default:
-                $sql = 'insert into ';
-                break;
-        }
-
-        $sql .= "`{$this->builder->from}` ";
-
-
-        return $sql;
+    protected function compileParams($param)
+    {
+        $param = array_values($param);
+        /**
+         * 条件的参数先，然后再到后面的参数
+         * Builder->where('sex', 1)->update($param);
+         */
+        return array_merge($this->builder->binds, $param);
     }
 }

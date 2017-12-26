@@ -79,7 +79,7 @@ class Builder
 
         $results = $this->processor->processSelect($this, $this->runSelect());
 
-        $this->columns = $original;
+        $this->columns = $results;
 
         return collect($results);
     }
@@ -91,7 +91,8 @@ class Builder
 
     public function execute($sql, $parameters)
     {
-       $statement = $this->dbh->prepare($sql);
+        $statement = $this->dbh->prepare($sql);
+
         $statement->execute($parameters);
 
         return $statement->fetchAll(PDO::FETCH_OBJ);
