@@ -3,7 +3,12 @@
 namespace Waitmoonman\Database\Foundation;
 
 
-class Query extends Grammar
+trait Query
 {
+    protected function compileStart()
+    {
+        $selects = implode(', ', $this->builder->columns);
 
+        return "select {$selects} from {$this->builder->from} ";
+    }
 }

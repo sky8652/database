@@ -31,13 +31,13 @@ abstract class Grammar implements DataBaseInterface
 
         // 拼接原生 SQL
         $sql = $this->toSql();
+
         // 获取预处理 SQL 的参数
         $param = $this->compileParams($param);
 
-        var_dump($sql, $param);
         $results = $this->builder->execute($sql, $param);
 
-        var_dump($results);
+        return $results;
     }
 
     protected function compileWheres()

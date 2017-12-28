@@ -6,7 +6,9 @@
 ### 查询构造器
 ```php
 <?php
-     require 'DB.php';
+     use Waitmoonman\Database\DB;
+     
+     require 'vendor/autoload.php';
      
      
      $config = [
@@ -18,7 +20,7 @@
                ];
 
      // 初始化配置  之后可以进行 CURD 了
-     DB::initConfig($config);
+     DB::addConnection($config);
     
     
      // 增
