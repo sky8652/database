@@ -8,6 +8,6 @@ DB::addConnection(require __DIR__ . '/config/database.php');
 
 
 
-$users = DB::table('users')->find(1);
+$users = DB::table('users')->insert(['name' => 'gps', 'email' => '1223@qq.com', 'password' => '123456']);
 
 var_dump($users);

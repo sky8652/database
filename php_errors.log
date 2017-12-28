@@ -147,3 +147,111 @@ Stack trace:
 [28-Dec-2017 15:15:33 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
 [28-Dec-2017 15:15:33 UTC] PHP   5. Waitmoonman\Database\Query\Builder->execute() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:36
 [28-Dec-2017 15:15:33 UTC] PHP   6. array_values() F:\phpStudy\WWW\DB\src\Query\Builder.php:97
+[28-Dec-2017 15:24:30 UTC] PHP Warning:  include(F:\phpStudy\WWW\DB\src\Foundation\Insert.php): failed to open stream: Resource temporarily unavailable in F:\phpStudy\WWW\DB\vendor\composer\ClassLoader.php on line 444
+[28-Dec-2017 15:24:30 UTC] PHP Stack trace:
+[28-Dec-2017 15:24:30 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:24:30 UTC] PHP   2. Waitmoonman\Database\Query\Builder->insert() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:24:30 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:24:30 UTC] PHP   4. spl_autoload_call() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:24:30 UTC] PHP   5. Composer\Autoload\ClassLoader->loadClass() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:24:30 UTC] PHP   6. Composer\Autoload\includeFile() F:\phpStudy\WWW\DB\vendor\composer\ClassLoader.php:322
+[28-Dec-2017 15:24:30 UTC] PHP Warning:  include(): Failed opening 'F:\phpStudy\WWW\DB\vendor\composer/../../src\Foundation\Insert.php' for inclusion (include_path='.;C:\php\pear') in F:\phpStudy\WWW\DB\vendor\composer\ClassLoader.php on line 444
+[28-Dec-2017 15:24:30 UTC] PHP Stack trace:
+[28-Dec-2017 15:24:30 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:24:30 UTC] PHP   2. Waitmoonman\Database\Query\Builder->insert() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:24:30 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:24:30 UTC] PHP   4. spl_autoload_call() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:24:30 UTC] PHP   5. Composer\Autoload\ClassLoader->loadClass() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:24:30 UTC] PHP   6. Composer\Autoload\includeFile() F:\phpStudy\WWW\DB\vendor\composer\ClassLoader.php:322
+[28-Dec-2017 15:24:30 UTC] PHP Fatal error:  Uncaught Error: Class '\Waitmoonman\Database\Foundation\Insert' not found in F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+Stack trace:
+#0 F:\phpStudy\WWW\DB\index.php(11): Waitmoonman\Database\Query\Builder->__call('insert', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 109
+[28-Dec-2017 15:27:21 UTC] PHP Notice:  Undefined variable: param in F:\phpStudy\WWW\DB\src\Foundation\Insert.php on line 28
+[28-Dec-2017 15:27:21 UTC] PHP Stack trace:
+[28-Dec-2017 15:27:21 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:27:21 UTC] PHP   2. Waitmoonman\Database\Query\Builder->insert() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:27:21 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:27:21 UTC] PHP   4. Waitmoonman\Database\Foundation\Insert->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:27:21 UTC] PHP   5. Waitmoonman\Database\Foundation\Insert->toSql() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:32
+[28-Dec-2017 15:27:21 UTC] PHP   6. Waitmoonman\Database\Foundation\Insert->compileStart() F:\phpStudy\WWW\DB\src\Foundation\Insert.php:13
+[28-Dec-2017 15:27:21 UTC] PHP Notice:  Undefined variable: param in F:\phpStudy\WWW\DB\src\Foundation\Insert.php on line 28
+[28-Dec-2017 15:27:21 UTC] PHP Stack trace:
+[28-Dec-2017 15:27:21 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:27:21 UTC] PHP   2. Waitmoonman\Database\Query\Builder->insert() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:27:21 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:27:21 UTC] PHP   4. Waitmoonman\Database\Foundation\Insert->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:27:21 UTC] PHP   5. Waitmoonman\Database\Foundation\Insert->toSql() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:32
+[28-Dec-2017 15:27:21 UTC] PHP   6. Waitmoonman\Database\Foundation\Insert->compileStart() F:\phpStudy\WWW\DB\src\Foundation\Insert.php:13
+[28-Dec-2017 15:30:36 UTC] PHP Warning:  array_merge(): Argument #1 is not an array in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 75
+[28-Dec-2017 15:30:36 UTC] PHP Stack trace:
+[28-Dec-2017 15:30:36 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:30:36 UTC] PHP   2. Waitmoonman\Database\Query\Builder->insert() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:30:36 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:30:36 UTC] PHP   4. Waitmoonman\Database\Foundation\Insert->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:30:36 UTC] PHP   5. Waitmoonman\Database\Foundation\Insert->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:35
+[28-Dec-2017 15:30:36 UTC] PHP   6. array_merge() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:75
+[28-Dec-2017 15:30:50 UTC] PHP Warning:  array_merge(): Argument #1 is not an array in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 75
+[28-Dec-2017 15:30:50 UTC] PHP Stack trace:
+[28-Dec-2017 15:30:50 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:30:50 UTC] PHP   2. Waitmoonman\Database\Query\Builder->insert() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:30:50 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:30:50 UTC] PHP   4. Waitmoonman\Database\Foundation\Insert->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:30:50 UTC] PHP   5. Waitmoonman\Database\Foundation\Insert->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:35
+[28-Dec-2017 15:30:50 UTC] PHP   6. array_merge() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:75
+[28-Dec-2017 15:30:54 UTC] PHP Warning:  array_merge(): Argument #1 is not an array in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 75
+[28-Dec-2017 15:30:54 UTC] PHP Stack trace:
+[28-Dec-2017 15:30:54 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:30:54 UTC] PHP   2. Waitmoonman\Database\Query\Builder->insert() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:30:54 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:30:54 UTC] PHP   4. Waitmoonman\Database\Foundation\Insert->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:30:54 UTC] PHP   5. Waitmoonman\Database\Foundation\Insert->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:35
+[28-Dec-2017 15:30:54 UTC] PHP   6. array_merge() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:75
+[28-Dec-2017 15:31:17 UTC] PHP Warning:  array_merge(): Argument #1 is not an array in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 75
+[28-Dec-2017 15:31:17 UTC] PHP Stack trace:
+[28-Dec-2017 15:31:17 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:31:17 UTC] PHP   2. Waitmoonman\Database\Query\Builder->insert() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:31:17 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:31:17 UTC] PHP   4. Waitmoonman\Database\Foundation\Insert->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:31:17 UTC] PHP   5. Waitmoonman\Database\Foundation\Insert->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:35
+[28-Dec-2017 15:31:17 UTC] PHP   6. array_merge() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:75
+[28-Dec-2017 15:31:33 UTC] PHP Warning:  array_merge(): Argument #1 is not an array in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 75
+[28-Dec-2017 15:31:33 UTC] PHP Stack trace:
+[28-Dec-2017 15:31:33 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:31:33 UTC] PHP   2. Waitmoonman\Database\Query\Builder->insert() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:31:33 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:31:33 UTC] PHP   4. Waitmoonman\Database\Foundation\Insert->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:31:33 UTC] PHP   5. Waitmoonman\Database\Foundation\Insert->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:35
+[28-Dec-2017 15:31:33 UTC] PHP   6. array_merge() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:75
+[28-Dec-2017 15:31:42 UTC] PHP Warning:  array_merge(): Argument #1 is not an array in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 75
+[28-Dec-2017 15:31:42 UTC] PHP Stack trace:
+[28-Dec-2017 15:31:42 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:31:42 UTC] PHP   2. Waitmoonman\Database\Query\Builder->insert() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:31:42 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:31:42 UTC] PHP   4. Waitmoonman\Database\Foundation\Insert->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:31:42 UTC] PHP   5. Waitmoonman\Database\Foundation\Insert->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:35
+[28-Dec-2017 15:31:42 UTC] PHP   6. array_merge() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:75
+[28-Dec-2017 15:32:06 UTC] PHP Warning:  array_merge(): Argument #1 is not an array in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 76
+[28-Dec-2017 15:32:06 UTC] PHP Stack trace:
+[28-Dec-2017 15:32:06 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:32:06 UTC] PHP   2. Waitmoonman\Database\Query\Builder->insert() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:32:06 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:32:06 UTC] PHP   4. Waitmoonman\Database\Foundation\Insert->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:32:06 UTC] PHP   5. Waitmoonman\Database\Foundation\Insert->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:35
+[28-Dec-2017 15:32:06 UTC] PHP   6. array_merge() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:76
+[28-Dec-2017 15:33:08 UTC] PHP Notice:  Undefined variable: param in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 76
+[28-Dec-2017 15:33:08 UTC] PHP Stack trace:
+[28-Dec-2017 15:33:08 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:33:08 UTC] PHP   2. Waitmoonman\Database\Query\Builder->insert() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:33:08 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:33:08 UTC] PHP   4. Waitmoonman\Database\Foundation\Insert->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:33:08 UTC] PHP   5. Waitmoonman\Database\Foundation\Insert->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:35
+[28-Dec-2017 15:33:08 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 76
+[28-Dec-2017 15:33:08 UTC] PHP Stack trace:
+[28-Dec-2017 15:33:08 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:33:08 UTC] PHP   2. Waitmoonman\Database\Query\Builder->insert() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:33:08 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:33:08 UTC] PHP   4. Waitmoonman\Database\Foundation\Insert->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:33:08 UTC] PHP   5. Waitmoonman\Database\Foundation\Insert->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:35
+[28-Dec-2017 15:33:08 UTC] PHP   6. array_merge() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:76

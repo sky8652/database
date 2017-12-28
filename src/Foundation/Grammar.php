@@ -17,7 +17,6 @@ abstract class Grammar implements DataBaseInterface
 
     public function toSql()
     {
-        // TODO 动态拼接 update delete insert into
         $sql = $this->compileStart();
 
         $sql .= $this->compileWheres();
@@ -27,11 +26,13 @@ abstract class Grammar implements DataBaseInterface
 
     public function build($param = [])
     {
-        // 拼接原生 SQL
+        $param = $this->buildParam($param);
+
+            // 拼接原生 SQL
         $sql = $this->toSql();
 
         // 获取预处理 SQL 的参数
-        $param = $this->compileParams($param);
+        $param = $this->compileParams();
 
         $results = $this->builder->execute($sql, $param);
 
@@ -64,18 +65,25 @@ abstract class Grammar implements DataBaseInterface
         return "";
     }
 
-    protected function compileParams($param)
+    protected function compileParams()
     {
-        // find() 参数不是数组
-        if (! is_array($param)) {
-            $this->params = $param = (array)$param;
-        }
 
-        $param = array_values($param);
+        var_dump(array_merge($this->builder->binds));
         /**
          * 条件的参数先，然后再到后面的参数
          * Builder->where('sex', 1)->update($param);
          */
-        return array_merge($this->builder->binds, $param);
+        return ($this->builder->binds);
+    }
+
+    protected function buildParam($param)
+    {
+        // find() 参数不是数组
+        if (! is_array($param)) {
+            $param = (array)$param;
+        }
+        $this->params = $param;
+
+        return $this->params;
     }
 }
