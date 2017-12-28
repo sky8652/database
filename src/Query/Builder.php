@@ -22,11 +22,20 @@ class Builder
     public function __construct(PDO $dbh)
     {
         $this->dbh = $dbh;
+        // 初始化构造 SQL
+        $this->initBuilder();
     }
 
-    public function select($column = ['*'])
+
+
+    public function select(...$column)
     {
-        $this->column = $column;
+        // 重置前一次的
+        $this->columns = [];
+
+        foreach (func_get_args() as $param) {
+            $this->columns[] = $param;
+        }
 
         return $this;
     }
@@ -74,16 +83,6 @@ class Builder
         return $this;
     }
 
-    public function get()
-    {
-
-        $results = $this->processor->processSelect($this, $this->runSelect());
-
-        $this->columns = $results;
-
-        return collect($results);
-    }
-
     public function toSql()
     {
 
@@ -93,6 +92,9 @@ class Builder
     {
         $statement = $this->dbh->prepare($sql);
 
+        // 重置参数的键
+        $parameters = array_values($parameters);
+
         $statement->execute($parameters);
 
         return $statement->fetchAll(PDO::FETCH_OBJ);
@@ -100,10 +102,15 @@ class Builder
 
     public function __call($method, $parameters)
     {
-        if (in_array($method, ['insert', 'delete', 'update'])) {
+        if (in_array($method, ['insert', 'delete', 'update', 'first', 'get'])) {
             $class = "\\Waitmoonman\\Database\\Foundation\\" . ucfirst($method);
 
             return (new $class($this))->build(...$parameters);
         }
+    }
+
+    protected function initBuilder()
+    {
+        $this->columns = ['*'];
     }
 }

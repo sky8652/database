@@ -7,4 +7,6 @@ require 'vendor/autoload.php';
 DB::addConnection(require __DIR__ . '/config/database.php');
 
 
-DB::table('users')->where('id', 1)->update(['sex' => '2', 'age' => 12]);
+$users = DB::table('users')->select('id', 'name', 'sex')->where('id', '>' ,1)->where('sex', 0)->get();
+
+var_dump($users);

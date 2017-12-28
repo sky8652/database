@@ -49,7 +49,7 @@ abstract class Grammar implements DataBaseInterface
         // wheres[''] -> 'column', 'operator', 'value'
         $wheres = 'where ';
         foreach ($this->builder->wheres as $where) {
-            $wheres .= $where['column'] . ' ' . $where['operator'] . ' ? and ';
+            $wheres .= "{$where['column']}  {$where['operator']} ? and ";
             $this->builder->binds[] = $where['value'];
         }
 
@@ -63,7 +63,7 @@ abstract class Grammar implements DataBaseInterface
      */
     protected function compileStart()
     {
-        return ;
+        return "";
     }
 
     protected function compileParams($param)

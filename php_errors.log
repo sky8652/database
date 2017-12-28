@@ -257,3 +257,115 @@ Stack trace:
 [26-Dec-2017 10:55:32 UTC] PHP   4. Waitmoonman\Database\Foundation\Update->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:106
 [26-Dec-2017 10:55:32 UTC] PHP   5. Waitmoonman\Database\Query\Builder->execute() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:33
 [26-Dec-2017 10:55:32 UTC] PHP   6. PDOStatement->execute() F:\phpStudy\WWW\DB\src\Query\Builder.php:96
+[28-Dec-2017 12:27:35 UTC] PHP Fatal error:  Uncaught Waitmoonman\Database\Exceptions\QueryException: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+ in F:\phpStudy\WWW\DB\src\Query\Connection.php:37
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\Query\Connection.php(16): Waitmoonman\Database\Query\Connection->createPdo('mysql:host=127....', Array)
+#1 F:\phpStudy\WWW\DB\src\DB.php(20): Waitmoonman\Database\Query\Connection->connect(Array)
+#2 F:\phpStudy\WWW\DB\index.php(7): Waitmoonman\Database\DB::addConnection(Array)
+#3 {main}
+  thrown in F:\phpStudy\WWW\DB\src\Query\Connection.php on line 37
+[28-Dec-2017 12:28:14 UTC] PHP Fatal error:  Uncaught Waitmoonman\Database\Exceptions\QueryException: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+ in F:\phpStudy\WWW\DB\src\Query\Connection.php:37
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\Query\Connection.php(16): Waitmoonman\Database\Query\Connection->createPdo('mysql:host=127....', Array)
+#1 F:\phpStudy\WWW\DB\src\DB.php(20): Waitmoonman\Database\Query\Connection->connect(Array)
+#2 F:\phpStudy\WWW\DB\index.php(7): Waitmoonman\Database\DB::addConnection(Array)
+#3 {main}
+  thrown in F:\phpStudy\WWW\DB\src\Query\Connection.php on line 37
+[28-Dec-2017 12:29:54 UTC] PHP Notice:  Undefined property: Waitmoonman\Database\Query\Builder::$processor in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 80
+[28-Dec-2017 12:29:54 UTC] PHP Stack trace:
+[28-Dec-2017 12:29:54 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 12:29:54 UTC] PHP   2. Waitmoonman\Database\Query\Builder->get() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 12:29:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function processSelect() on null in F:\phpStudy\WWW\DB\src\Query\Builder.php:80
+Stack trace:
+#0 F:\phpStudy\WWW\DB\index.php(10): Waitmoonman\Database\Query\Builder->get()
+#1 {main}
+  thrown in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 80
+[28-Dec-2017 12:30:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Waitmoonman\Database\Query\dd() in F:\phpStudy\WWW\DB\src\Query\Builder.php:79
+Stack trace:
+#0 F:\phpStudy\WWW\DB\index.php(10): Waitmoonman\Database\Query\Builder->get()
+#1 {main}
+  thrown in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 79
+[28-Dec-2017 12:30:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Waitmoonman\Database\Query\dd() in F:\phpStudy\WWW\DB\src\Query\Builder.php:79
+Stack trace:
+#0 F:\phpStudy\WWW\DB\index.php(10): Waitmoonman\Database\Query\Builder->get()
+#1 {main}
+  thrown in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 79
+[28-Dec-2017 12:43:38 UTC] PHP Notice:  Array to string conversion in F:\phpStudy\WWW\DB\src\Foundation\Get.php on line 28
+[28-Dec-2017 12:43:38 UTC] PHP Stack trace:
+[28-Dec-2017 12:43:38 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 12:43:38 UTC] PHP   2. Waitmoonman\Database\Query\Builder->get() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 12:43:38 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 12:43:38 UTC] PHP   4. Waitmoonman\Database\Foundation\Get->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:102
+[28-Dec-2017 12:43:38 UTC] PHP   5. Waitmoonman\Database\Foundation\Get->toSql() F:\phpStudy\WWW\DB\src\Foundation\Get.php:13
+[28-Dec-2017 12:43:38 UTC] PHP   6. Waitmoonman\Database\Foundation\Get->compileStart() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:21
+[28-Dec-2017 12:43:38 UTC] PHP   7. implode() F:\phpStudy\WWW\DB\src\Foundation\Get.php:28
+[28-Dec-2017 12:43:55 UTC] PHP Notice:  Array to string conversion in F:\phpStudy\WWW\DB\src\Foundation\Get.php on line 28
+[28-Dec-2017 12:43:55 UTC] PHP Stack trace:
+[28-Dec-2017 12:43:55 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 12:43:55 UTC] PHP   2. Waitmoonman\Database\Query\Builder->get() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 12:43:55 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 12:43:55 UTC] PHP   4. Waitmoonman\Database\Foundation\Get->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:102
+[28-Dec-2017 12:43:55 UTC] PHP   5. Waitmoonman\Database\Foundation\Get->toSql() F:\phpStudy\WWW\DB\src\Foundation\Get.php:13
+[28-Dec-2017 12:43:55 UTC] PHP   6. Waitmoonman\Database\Foundation\Get->compileStart() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:21
+[28-Dec-2017 12:43:55 UTC] PHP   7. implode() F:\phpStudy\WWW\DB\src\Foundation\Get.php:28
+[28-Dec-2017 12:43:55 UTC] PHP Notice:  Array to string conversion in F:\phpStudy\WWW\DB\src\Foundation\Get.php on line 28
+[28-Dec-2017 12:43:55 UTC] PHP Stack trace:
+[28-Dec-2017 12:43:55 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 12:43:55 UTC] PHP   2. Waitmoonman\Database\Query\Builder->get() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 12:43:55 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 12:43:55 UTC] PHP   4. Waitmoonman\Database\Foundation\Get->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:102
+[28-Dec-2017 12:43:55 UTC] PHP   5. Waitmoonman\Database\Foundation\Get->toSql() F:\phpStudy\WWW\DB\src\Foundation\Get.php:13
+[28-Dec-2017 12:43:55 UTC] PHP   6. Waitmoonman\Database\Foundation\Get->compileStart() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:21
+[28-Dec-2017 12:43:55 UTC] PHP   7. implode() F:\phpStudy\WWW\DB\src\Foundation\Get.php:28
+[28-Dec-2017 12:43:55 UTC] PHP Notice:  Array to string conversion in F:\phpStudy\WWW\DB\src\Foundation\Get.php on line 28
+[28-Dec-2017 12:43:55 UTC] PHP Stack trace:
+[28-Dec-2017 12:43:55 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 12:43:55 UTC] PHP   2. Waitmoonman\Database\Query\Builder->get() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 12:43:55 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 12:43:55 UTC] PHP   4. Waitmoonman\Database\Foundation\Get->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:102
+[28-Dec-2017 12:43:55 UTC] PHP   5. Waitmoonman\Database\Foundation\Get->toSql() F:\phpStudy\WWW\DB\src\Foundation\Get.php:13
+[28-Dec-2017 12:43:55 UTC] PHP   6. Waitmoonman\Database\Foundation\Get->compileStart() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:21
+[28-Dec-2017 12:43:55 UTC] PHP   7. implode() F:\phpStudy\WWW\DB\src\Foundation\Get.php:28
+[28-Dec-2017 12:48:40 UTC] PHP Notice:  Undefined property: Waitmoonman\Database\Foundation\Get::$form in F:\phpStudy\WWW\DB\src\Foundation\Get.php on line 29
+[28-Dec-2017 12:48:40 UTC] PHP Stack trace:
+[28-Dec-2017 12:48:40 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 12:48:40 UTC] PHP   2. Waitmoonman\Database\Query\Builder->get() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 12:48:40 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 12:48:40 UTC] PHP   4. Waitmoonman\Database\Foundation\Get->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:105
+[28-Dec-2017 12:48:40 UTC] PHP   5. Waitmoonman\Database\Foundation\Get->toSql() F:\phpStudy\WWW\DB\src\Foundation\Get.php:13
+[28-Dec-2017 12:48:40 UTC] PHP   6. Waitmoonman\Database\Foundation\Get->compileStart() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:21
+[28-Dec-2017 12:49:24 UTC] PHP Notice:  Undefined property: Waitmoonman\Database\Foundation\Get::$from in F:\phpStudy\WWW\DB\src\Foundation\Get.php on line 29
+[28-Dec-2017 12:49:24 UTC] PHP Stack trace:
+[28-Dec-2017 12:49:24 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 12:49:24 UTC] PHP   2. Waitmoonman\Database\Query\Builder->get() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 12:49:24 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 12:49:24 UTC] PHP   4. Waitmoonman\Database\Foundation\Get->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:105
+[28-Dec-2017 12:49:24 UTC] PHP   5. Waitmoonman\Database\Foundation\Get->toSql() F:\phpStudy\WWW\DB\src\Foundation\Get.php:13
+[28-Dec-2017 12:49:24 UTC] PHP   6. Waitmoonman\Database\Foundation\Get->compileStart() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:21
+[28-Dec-2017 13:00:12 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: Columns/Parameters are 1-based in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 101
+[28-Dec-2017 13:00:12 UTC] PHP Stack trace:
+[28-Dec-2017 13:00:12 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 13:00:12 UTC] PHP   2. Waitmoonman\Database\Query\Builder->get() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 13:00:12 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 13:00:12 UTC] PHP   4. Waitmoonman\Database\Foundation\Get->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:115
+[28-Dec-2017 13:00:12 UTC] PHP   5. Waitmoonman\Database\Query\Builder->execute() F:\phpStudy\WWW\DB\src\Foundation\Get.php:17
+[28-Dec-2017 13:00:12 UTC] PHP   6. PDOStatement->bindValue() F:\phpStudy\WWW\DB\src\Query\Builder.php:101
+[28-Dec-2017 13:00:31 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: Columns/Parameters are 1-based in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 101
+[28-Dec-2017 13:00:31 UTC] PHP Stack trace:
+[28-Dec-2017 13:00:31 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 13:00:31 UTC] PHP   2. Waitmoonman\Database\Query\Builder->get() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 13:00:31 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 13:00:31 UTC] PHP   4. Waitmoonman\Database\Foundation\Get->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:115
+[28-Dec-2017 13:00:31 UTC] PHP   5. Waitmoonman\Database\Query\Builder->execute() F:\phpStudy\WWW\DB\src\Foundation\Get.php:17
+[28-Dec-2017 13:00:31 UTC] PHP   6. PDOStatement->bindValue() F:\phpStudy\WWW\DB\src\Query\Builder.php:101
+[28-Dec-2017 13:00:31 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 104
+[28-Dec-2017 13:00:31 UTC] PHP Stack trace:
+[28-Dec-2017 13:00:31 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 13:00:31 UTC] PHP   2. Waitmoonman\Database\Query\Builder->get() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 13:00:31 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 13:00:31 UTC] PHP   4. Waitmoonman\Database\Foundation\Get->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:115
+[28-Dec-2017 13:00:31 UTC] PHP   5. Waitmoonman\Database\Query\Builder->execute() F:\phpStudy\WWW\DB\src\Foundation\Get.php:17
+[28-Dec-2017 13:00:31 UTC] PHP   6. PDOStatement->execute() F:\phpStudy\WWW\DB\src\Query\Builder.php:104
+[28-Dec-2017 13:01:33 UTC] PHP Parse error:  syntax error, unexpected 'value' (T_STRING) in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 52
