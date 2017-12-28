@@ -3,7 +3,6 @@
 namespace Waitmoonman\Database\Foundation;
 
 
-use Waitmoonman\Database\Contracts\DataBaseInterface;
 use Waitmoonman\Database\Query\Builder;
 
 class Delete extends Grammar

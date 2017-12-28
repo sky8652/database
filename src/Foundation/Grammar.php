@@ -27,8 +27,6 @@ abstract class Grammar implements DataBaseInterface
 
     public function build($param = [])
     {
-        $this->params = $param;
-
         // 拼接原生 SQL
         $sql = $this->toSql();
 
@@ -68,6 +66,11 @@ abstract class Grammar implements DataBaseInterface
 
     protected function compileParams($param)
     {
+        // find() 参数不是数组
+        if (! is_array($param)) {
+            $this->params = $param = (array)$param;
+        }
+
         $param = array_values($param);
         /**
          * 条件的参数先，然后再到后面的参数

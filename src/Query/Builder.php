@@ -11,6 +11,7 @@ class Builder
      */
     public $dbh;
 
+    public $primaryKey;
     public $columns;
     public $from;
     public $offset;
@@ -83,12 +84,12 @@ class Builder
         return $this;
     }
 
-    public function toSql()
+    public function getPrimaryKey()
     {
-
+        return $this->primaryKey ?: 'id';
     }
 
-    public function execute($sql, $parameters)
+    public function execute($sql, $parameters = [])
     {
         $statement = $this->dbh->prepare($sql);
 
@@ -102,7 +103,7 @@ class Builder
 
     public function __call($method, $parameters)
     {
-        if (in_array($method, ['insert', 'delete', 'update', 'first', 'get'])) {
+        if (in_array($method, ['insert', 'delete', 'update', 'first', 'get', 'find'])) {
             $class = "\\Waitmoonman\\Database\\Foundation\\" . ucfirst($method);
 
             return (new $class($this))->build(...$parameters);

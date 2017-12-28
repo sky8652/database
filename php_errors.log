@@ -1,0 +1,149 @@
+[28-Dec-2017 15:00:29 UTC] PHP Warning:  array_values() expects parameter 1 to be array, integer given in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 71
+[28-Dec-2017 15:00:29 UTC] PHP Stack trace:
+[28-Dec-2017 15:00:29 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:00:29 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:00:29 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:00:29 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:108
+[28-Dec-2017 15:00:29 UTC] PHP   5. Waitmoonman\Database\Foundation\Find->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:36
+[28-Dec-2017 15:00:29 UTC] PHP   6. array_values() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:71
+[28-Dec-2017 15:00:29 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 76
+[28-Dec-2017 15:00:29 UTC] PHP Stack trace:
+[28-Dec-2017 15:00:29 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:00:29 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:00:29 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:00:29 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:108
+[28-Dec-2017 15:00:29 UTC] PHP   5. Waitmoonman\Database\Foundation\Find->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:36
+[28-Dec-2017 15:00:29 UTC] PHP   6. array_merge() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:76
+[28-Dec-2017 15:00:29 UTC] PHP Warning:  array_values() expects parameter 1 to be array, null given in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 96
+[28-Dec-2017 15:00:29 UTC] PHP Stack trace:
+[28-Dec-2017 15:00:29 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:00:29 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:00:29 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:00:29 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:108
+[28-Dec-2017 15:00:29 UTC] PHP   5. Waitmoonman\Database\Query\Builder->execute() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:38
+[28-Dec-2017 15:00:29 UTC] PHP   6. array_values() F:\phpStudy\WWW\DB\src\Query\Builder.php:96
+[28-Dec-2017 15:01:38 UTC] PHP Warning:  array_values() expects parameter 1 to be array, null given in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 96
+[28-Dec-2017 15:01:38 UTC] PHP Stack trace:
+[28-Dec-2017 15:01:38 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:01:38 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:01:38 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:01:38 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:108
+[28-Dec-2017 15:01:38 UTC] PHP   5. Waitmoonman\Database\Query\Builder->execute() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:38
+[28-Dec-2017 15:01:38 UTC] PHP   6. array_values() F:\phpStudy\WWW\DB\src\Query\Builder.php:96
+[28-Dec-2017 15:02:19 UTC] PHP Warning:  array_values() expects parameter 1 to be array, null given in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 96
+[28-Dec-2017 15:02:19 UTC] PHP Stack trace:
+[28-Dec-2017 15:02:19 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:02:19 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:02:19 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:02:19 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:108
+[28-Dec-2017 15:02:19 UTC] PHP   5. Waitmoonman\Database\Query\Builder->execute() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:38
+[28-Dec-2017 15:02:19 UTC] PHP   6. array_values() F:\phpStudy\WWW\DB\src\Query\Builder.php:96
+[28-Dec-2017 15:03:04 UTC] PHP Warning:  array_values() expects parameter 1 to be array, null given in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 96
+[28-Dec-2017 15:03:04 UTC] PHP Stack trace:
+[28-Dec-2017 15:03:04 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:03:04 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:03:04 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:03:04 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:108
+[28-Dec-2017 15:03:04 UTC] PHP   5. Waitmoonman\Database\Query\Builder->execute() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:38
+[28-Dec-2017 15:03:04 UTC] PHP   6. array_values() F:\phpStudy\WWW\DB\src\Query\Builder.php:96
+[28-Dec-2017 15:03:44 UTC] PHP Warning:  array_values() expects parameter 1 to be array, integer given in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 71
+[28-Dec-2017 15:03:44 UTC] PHP Stack trace:
+[28-Dec-2017 15:03:44 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:03:44 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:03:44 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:03:44 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:108
+[28-Dec-2017 15:03:44 UTC] PHP   5. Waitmoonman\Database\Foundation\Find->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:36
+[28-Dec-2017 15:03:44 UTC] PHP   6. array_values() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:71
+[28-Dec-2017 15:03:44 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 76
+[28-Dec-2017 15:03:44 UTC] PHP Stack trace:
+[28-Dec-2017 15:03:44 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:03:44 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:03:44 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:03:44 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:108
+[28-Dec-2017 15:03:44 UTC] PHP   5. Waitmoonman\Database\Foundation\Find->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:36
+[28-Dec-2017 15:03:44 UTC] PHP   6. array_merge() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:76
+[28-Dec-2017 15:03:44 UTC] PHP Warning:  array_values() expects parameter 1 to be array, null given in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 96
+[28-Dec-2017 15:03:44 UTC] PHP Stack trace:
+[28-Dec-2017 15:03:44 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:03:44 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:03:44 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:03:44 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:108
+[28-Dec-2017 15:03:44 UTC] PHP   5. Waitmoonman\Database\Query\Builder->execute() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:38
+[28-Dec-2017 15:03:44 UTC] PHP   6. array_values() F:\phpStudy\WWW\DB\src\Query\Builder.php:96
+[28-Dec-2017 15:04:40 UTC] PHP Warning:  array_values() expects parameter 1 to be array, integer given in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 69
+[28-Dec-2017 15:04:40 UTC] PHP Stack trace:
+[28-Dec-2017 15:04:40 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:04:40 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:04:40 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:04:40 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:108
+[28-Dec-2017 15:04:40 UTC] PHP   5. Waitmoonman\Database\Foundation\Find->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:34
+[28-Dec-2017 15:04:40 UTC] PHP   6. array_values() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:69
+[28-Dec-2017 15:04:40 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 74
+[28-Dec-2017 15:04:40 UTC] PHP Stack trace:
+[28-Dec-2017 15:04:40 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:04:40 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:04:40 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:04:40 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:108
+[28-Dec-2017 15:04:40 UTC] PHP   5. Waitmoonman\Database\Foundation\Find->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:34
+[28-Dec-2017 15:04:40 UTC] PHP   6. array_merge() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:74
+[28-Dec-2017 15:04:40 UTC] PHP Warning:  array_values() expects parameter 1 to be array, null given in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 96
+[28-Dec-2017 15:04:40 UTC] PHP Stack trace:
+[28-Dec-2017 15:04:40 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:04:40 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:04:40 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:10
+[28-Dec-2017 15:04:40 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:108
+[28-Dec-2017 15:04:40 UTC] PHP   5. Waitmoonman\Database\Query\Builder->execute() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:36
+[28-Dec-2017 15:04:40 UTC] PHP   6. array_values() F:\phpStudy\WWW\DB\src\Query\Builder.php:96
+[28-Dec-2017 15:11:21 UTC] PHP Fatal error:  Uncaught Error: Class '\Waitmoonman\Database\Foundation\Find' not found in F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+Stack trace:
+#0 F:\phpStudy\WWW\DB\index.php(11): Waitmoonman\Database\Query\Builder->__call('find', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 109
+[28-Dec-2017 15:15:24 UTC] PHP Warning:  array_values() expects parameter 1 to be array, integer given in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 75
+[28-Dec-2017 15:15:24 UTC] PHP Stack trace:
+[28-Dec-2017 15:15:24 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:15:24 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:15:24 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:15:24 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:15:24 UTC] PHP   5. Waitmoonman\Database\Foundation\Find->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:34
+[28-Dec-2017 15:15:24 UTC] PHP   6. array_values() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:75
+[28-Dec-2017 15:15:24 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 80
+[28-Dec-2017 15:15:24 UTC] PHP Stack trace:
+[28-Dec-2017 15:15:24 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:15:24 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:15:24 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:15:24 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:15:24 UTC] PHP   5. Waitmoonman\Database\Foundation\Find->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:34
+[28-Dec-2017 15:15:24 UTC] PHP   6. array_merge() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:80
+[28-Dec-2017 15:15:24 UTC] PHP Warning:  array_values() expects parameter 1 to be array, null given in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 97
+[28-Dec-2017 15:15:24 UTC] PHP Stack trace:
+[28-Dec-2017 15:15:24 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:15:24 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:15:24 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:15:24 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:15:24 UTC] PHP   5. Waitmoonman\Database\Query\Builder->execute() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:36
+[28-Dec-2017 15:15:24 UTC] PHP   6. array_values() F:\phpStudy\WWW\DB\src\Query\Builder.php:97
+[28-Dec-2017 15:15:33 UTC] PHP Warning:  array_values() expects parameter 1 to be array, integer given in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 75
+[28-Dec-2017 15:15:33 UTC] PHP Stack trace:
+[28-Dec-2017 15:15:33 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:15:33 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:15:33 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:15:33 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:15:33 UTC] PHP   5. Waitmoonman\Database\Foundation\Find->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:34
+[28-Dec-2017 15:15:33 UTC] PHP   6. array_values() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:75
+[28-Dec-2017 15:15:33 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in F:\phpStudy\WWW\DB\src\Foundation\Grammar.php on line 80
+[28-Dec-2017 15:15:33 UTC] PHP Stack trace:
+[28-Dec-2017 15:15:33 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:15:33 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:15:33 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:15:33 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:15:33 UTC] PHP   5. Waitmoonman\Database\Foundation\Find->compileParams() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:34
+[28-Dec-2017 15:15:33 UTC] PHP   6. array_merge() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:80
+[28-Dec-2017 15:15:33 UTC] PHP Warning:  array_values() expects parameter 1 to be array, null given in F:\phpStudy\WWW\DB\src\Query\Builder.php on line 97
+[28-Dec-2017 15:15:33 UTC] PHP Stack trace:
+[28-Dec-2017 15:15:33 UTC] PHP   1. {main}() F:\phpStudy\WWW\DB\index.php:0
+[28-Dec-2017 15:15:33 UTC] PHP   2. Waitmoonman\Database\Query\Builder->find() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:15:33 UTC] PHP   3. Waitmoonman\Database\Query\Builder->__call() F:\phpStudy\WWW\DB\index.php:11
+[28-Dec-2017 15:15:33 UTC] PHP   4. Waitmoonman\Database\Foundation\Find->build() F:\phpStudy\WWW\DB\src\Query\Builder.php:109
+[28-Dec-2017 15:15:33 UTC] PHP   5. Waitmoonman\Database\Query\Builder->execute() F:\phpStudy\WWW\DB\src\Foundation\Grammar.php:36
+[28-Dec-2017 15:15:33 UTC] PHP   6. array_values() F:\phpStudy\WWW\DB\src\Query\Builder.php:97
