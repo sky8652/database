@@ -6,5 +6,4 @@ use PDOException;
 
 class QueryException extends PDOException
 {
-
 }

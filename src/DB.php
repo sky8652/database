@@ -2,7 +2,6 @@
 
 namespace Waitmoonman\Database;
 
-
 use Waitmoonman\Database\Exceptions\QueryException;
 use Waitmoonman\Database\Query\Builder;
 use Waitmoonman\Database\Query\Connection;
@@ -10,14 +9,14 @@ use Waitmoonman\Database\Query\Connection;
 class DB
 {
     protected static $instance;
-    protected $dbh;
 
+    protected $dbh;
 
     public static function addConnection(array $config)
     {
         $instance = self::getInstance();
 
-        $instance->dbh = (new Connection)->connect($config);
+        $instance->dbh = (new Connection())->connect($config);
     }
 
     public static function table($table)
@@ -29,7 +28,6 @@ class DB
         return (new Builder($instance->dbh))->table($table);
     }
 
-
     protected static function checkConnect()
     {
         $instance = self::getInstance();
@@ -39,12 +37,10 @@ class DB
         }
     }
 
-
     protected static function getInstance()
     {
-        if (is_null(self::$instance))
-        {
-            self::$instance = new self;
+        if (is_null(self::$instance)) {
+            self::$instance = new self();
         }
 
         return self::$instance;

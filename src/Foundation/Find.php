@@ -2,7 +2,6 @@
 
 namespace Waitmoonman\Database\Foundation;
 
-
 class Find extends Grammar
 {
     use Query;

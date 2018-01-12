@@ -8,6 +8,7 @@ use Waitmoonman\Database\Query\Builder;
 abstract class Grammar implements DataBaseInterface
 {
     protected $builder;
+
     protected $params;
 
     public function __construct(Builder $builder)
@@ -28,7 +29,7 @@ abstract class Grammar implements DataBaseInterface
     {
         $param = $this->buildParam($param);
 
-            // 拼接原生 SQL
+        // 拼接原生 SQL
         $sql = $this->toSql();
 
         // 获取预处理 SQL 的参数
@@ -58,29 +59,28 @@ abstract class Grammar implements DataBaseInterface
     }
 
     /**
-     * operate $this->table
+     * operate $this->table.
      */
     protected function compileStart()
     {
-        return "";
+        return '';
     }
 
     protected function compileParams()
     {
-
         var_dump(array_merge($this->builder->binds));
-        /**
+        /*
          * 条件的参数先，然后再到后面的参数
          * Builder->where('sex', 1)->update($param);
          */
-        return ($this->builder->binds);
+        return $this->builder->binds;
     }
 
     protected function buildParam($param)
     {
         // find() 参数不是数组
-        if (! is_array($param)) {
-            $param = (array)$param;
+        if (!is_array($param)) {
+            $param = (array) $param;
         }
         $this->params = $param;
 

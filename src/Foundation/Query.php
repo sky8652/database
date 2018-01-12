@@ -2,7 +2,6 @@
 
 namespace Waitmoonman\Database\Foundation;
 
-
 trait Query
 {
     protected function compileStart()
