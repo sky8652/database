@@ -1,7 +1,11 @@
- WaitMoonMan/ClassLibrary
+ WaitMoonMan/database
 ===================================  
- ![gps](https://avatars0.githubusercontent.com/u/28035971?v=3&s=460 "gps")  
-  
+<p align="center">
+<a href="https://packagist.org/packages/davidnineroc/database"><img src="https://travis-ci.org/DavidNineRoc/database.svg?branch=master" alt="Build Status"></a>
+<a href="https://packagist.org/packages/davidnineroc/database"><img src="https://styleci.io/repos/96854420/shield?branch=master" alt="Style CI" Version"></a>
+<a href="https://packagist.org/packages/davidnineroc/database"><img src="https://poser.pugx.org/davidnineroc/database/downloads" alt="Downloads"></a>
+<a href="https://packagist.org/packages/davidnineroc/database"><img src="https://poser.pugx.org/laravel/passport/license.svg" alt="License"></a>
+</p> 
 
 ### 查询构造器
 ```php
