@@ -7,17 +7,24 @@ use PDO;
 class Builder
 {
     /**
-     * 数据库连接句柄
+     * 数据库连接句柄.
      */
     public $dbh;
 
     public $primaryKey;
+
     public $columns;
+
     public $from;
+
     public $offset;
+
     public $limit;
+
     public $orders;
+
     public $wheres = [];
+
     public $binds = [];
 
     public function __construct(PDO $dbh)
@@ -26,8 +33,6 @@ class Builder
         // 初始化构造 SQL
         $this->initBuilder();
     }
-
-
 
     public function select(...$column)
     {
@@ -47,7 +52,6 @@ class Builder
 
         return $this;
     }
-
 
     public function offset($offset)
     {
@@ -72,7 +76,7 @@ class Builder
 
     public function where($column, $operator = null, $value = null)
     {
-        if (func_num_args() == 2) {
+        if (2 === func_num_args()) {
             list($column, $value) = [$column, $operator];
             $operator = '=';
         }
@@ -103,8 +107,8 @@ class Builder
 
     public function __call($method, $parameters)
     {
-        if (in_array($method, ['insert', 'delete', 'update', 'first', 'get', 'find'])) {
-            $class = "\\Waitmoonman\\Database\\Foundation\\" . ucfirst($method);
+        if (in_array($method, ['insert', 'delete', 'update', 'first', 'get', 'find'], true)) {
+            $class = '\\Waitmoonman\\Database\\Foundation\\'.ucfirst($method);
 
             return (new $class($this))->build(...$parameters);
         }

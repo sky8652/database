@@ -2,7 +2,6 @@
 
 namespace Waitmoonman\Database\Foundation;
 
-
 use Waitmoonman\Database\Query\Builder;
 
 class Delete extends Grammar
@@ -13,5 +12,4 @@ class Delete extends Grammar
     {
         $this->builder = $builder;
     }
-
 }

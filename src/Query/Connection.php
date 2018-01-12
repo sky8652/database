@@ -8,7 +8,6 @@ use Waitmoonman\Database\Exceptions\QueryException;
 
 class Connection
 {
-
     public function connect(array $config)
     {
         $dsn = $this->getDsn($config);
@@ -36,7 +35,5 @@ class Connection
         } catch (PDOException $e) {
             throw new QueryException($e->getMessage());
         }
-
     }
-
 }

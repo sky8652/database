@@ -2,7 +2,6 @@
 
 namespace Waitmoonman\Database\Foundation;
 
-
 class First extends Grammar
 {
     use Query;
@@ -14,7 +13,7 @@ class First extends Grammar
 
         $sql .= $this->compileWheres();
 
-        $sql .= " limit 1";
+        $sql .= ' limit 1';
 
         return $sql;
     }

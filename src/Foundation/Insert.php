@@ -2,10 +2,6 @@
 
 namespace Waitmoonman\Database\Foundation;
 
-
-use Waitmoonman\Database\Contracts\DataBaseInterface;
-use Waitmoonman\Database\Query\Builder;
-
 class Insert extends Grammar
 {
     public function toSql()
@@ -22,9 +18,8 @@ class Insert extends Grammar
         $params = '';
         $values = '';
         foreach ($this->params as $key => $value) {
-
             $params .= "{$key},";
-            $values .= "?,";
+            $values .= '?,';
             $this->builder->binds[] = $value;
         }
         $params = trim($params, ',');
@@ -52,6 +47,4 @@ class Insert extends Grammar
 
         return $results;
     }
-
-
 }
