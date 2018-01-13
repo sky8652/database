@@ -8,7 +8,7 @@ use Waitmoonman\Database\Schema\Grammar;
 
 class Update extends Grammar
 {
-    public function compileStart($param = [])
+    public function compileStart()
     {
         $params = array_keys($this->params);
 
@@ -18,8 +18,7 @@ class Update extends Grammar
             $sql .= "{$param}=?,";
         }
 
-        $sql = rtrim($sql, ',');
-        $sql .= ' ';
+        $sql = rtrim($sql, ',') . ' ';
 
         return $sql;
     }

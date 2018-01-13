@@ -27,6 +27,9 @@ class Grammar implements DataBaseInterface
 
     public function build($params = [])
     {
+        // 开始的参数处理
+        $this->compileStartParams($params);
+
         // 拼接原生 SQL
         $sql = $this->toSql();
 
@@ -40,7 +43,8 @@ class Grammar implements DataBaseInterface
         }
 
         // 执行 SQL 运行
-        $results = $this->builder->getExecuteResults($sql, $parameters);
+        $method = $this->getBaseClass();
+        $results = $this->builder->getExecuteResults($sql, $parameters, $method);
 
         return $results;
     }
@@ -54,7 +58,7 @@ class Grammar implements DataBaseInterface
         // wheres[''] -> 'column', 'operator', 'value'
         $wheres = 'where ';
         foreach ($this->builder->wheres as $where) {
-            $wheres .= "{$where['column']}  {$where['operator']} ? and ";
+            $wheres .= "{$where['column']} {$where['operator']} ? and ";
             $this->builder->binds[] = $where['value'];
         }
 
@@ -103,16 +107,16 @@ class Grammar implements DataBaseInterface
         return $this->builder->binds = array_values($this->builder->binds);
     }
 
-    protected function buildParam($param)
-    {
-        // find() 参数不是数组
-        if (!is_array($param)) {
-            $param = (array) $param;
-        }
-        $this->params = $param;
 
-        return $this->params;
+    protected function compileStartParams($params)
+    {
+        foreach ($params as $key => $param) {
+            $this->params[$key] = $param;
+            // 执行时只需要用值，不需要 key
+            $this->builder->binds[] = $param;
+        }
     }
+
 
     private function listenBuilderSql($sql, $parameters)
     {
@@ -131,7 +135,12 @@ class Grammar implements DataBaseInterface
         for ($i = 0, $l = strlen($sql); $i < $l; ++ $i) {
 
             if ($sql{$i} == '?') {
-                $realSql .= array_shift($parameters);
+                $param = array_shift($parameters);
+                if (gettype($param) == 'string') {
+                    $realSql .= "'{$param}'";
+                } else {
+                    $realSql .= $param;
+                }
             } else {
                 $realSql .= $sql{$i};
             }
@@ -139,4 +148,15 @@ class Grammar implements DataBaseInterface
 
         return $realSql;
     }
+
+    protected function getBaseClass()
+    {
+        $class = basename(get_class($this));
+
+        $class = strtolower($class);
+
+        return $class;
+    }
+
+
 }

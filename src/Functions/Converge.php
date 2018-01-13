@@ -19,13 +19,4 @@ class Converge extends Grammar
 
         return $start;
     }
-
-    protected function getBaseClass()
-    {
-        $class = basename(get_class($this));
-
-        $class = strtolower($class);
-
-        return $class;
-    }
 }

@@ -100,14 +100,31 @@ class Builder
         return $this->primaryKey ?: 'id';
     }
 
-    public function getExecuteResults($sql, $parameters = [])
+    public function getExecuteResults($sql, $parameters = [], $method = 'query')
     {
         // 预处理 SQL
         $statement = $this->dbh->prepare($sql);
         // 执行预处理语句
         $statement->execute($parameters);
-        // 获取返回结果集
-        return $statement->fetchAll(PDO::FETCH_OBJ);
+
+        // 根据操作返回对应的结果
+        switch ($method) {
+            case 'query':
+                // 获取返回结果集rowCount
+                return $statement->fetchAll(PDO::FETCH_OBJ);
+                break;
+            case 'update':
+            case 'delete':
+                return $statement->rowCount();
+                break;
+            case 'insert':
+                return $this->dbh->lastInsertId();
+                break;
+            default:
+                throw new QueryException('无效的执行操作');
+                break;
+        }
+
     }
 
 
