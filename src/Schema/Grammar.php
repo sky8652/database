@@ -119,7 +119,7 @@ class Grammar implements DataBaseInterface
     }
 
 
-    private function listenBuilderSql($sql, $parameters)
+    protected function listenBuilderSql($sql, $parameters)
     {
         $listenParams = [$sql, $parameters];
         // 需要拼接出货 SQL
@@ -130,7 +130,7 @@ class Grammar implements DataBaseInterface
         call_user_func_array($this->builder->listenHandle['action'], $listenParams);
     }
 
-    private function getRealSql($sql, $parameters)
+    protected function getRealSql($sql, $parameters)
     {
         $realSql = '';
         for ($i = 0, $l = strlen($sql); $i < $l; ++ $i) {

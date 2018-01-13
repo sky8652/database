@@ -41,12 +41,12 @@ class Builder
         $this->initBuilder();
     }
 
-    public function select(...$column)
+    public function select(...$columns)
     {
         // 重置前一次的
         $this->columns = [];
 
-        foreach (func_get_args() as $param) {
+        foreach ($columns as $param) {
             $this->columns[] = $param;
         }
 
@@ -128,6 +128,12 @@ class Builder
                 break;
             case 'insert':
                 return $this->dbh->lastInsertId();
+                break;
+            case 'count':
+            case 'max':
+            case 'min':
+            case 'sum':
+                return $statement->fetch(PDO::FETCH_OBJ);
                 break;
             default:
                 throw new QueryException('无效的执行操作');

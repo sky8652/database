@@ -17,7 +17,8 @@ $users = DB::table('users')
         }
         , true
     )
-    ->where('id', '>' ,1)
-    ->find(1);
+    ->select('id', 'name', 'email')
+    ->where('id', '>' ,4)
+    ->paginate(3);
 
 var_dump($users);

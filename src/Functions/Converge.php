@@ -6,6 +6,8 @@ use Waitmoonman\Database\Schema\Grammar;
 
 class Converge extends Grammar
 {
+    protected $asName = '';
+
     public function compileStart()
     {
         $column = '*';
@@ -15,8 +17,15 @@ class Converge extends Grammar
 
         $function = $this->getBaseClass();
 
-        $start = "select {$function}({$column}) from {$this->builder->from} ";
+        $start = "select {$function}({$column}) {$this->asName} from {$this->builder->from} ";
 
         return $start;
+    }
+
+    public function setAsName($name)
+    {
+        $this->asName = "as {$name}";
+
+        return $this;
     }
 }
