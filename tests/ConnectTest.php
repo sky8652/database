@@ -4,7 +4,7 @@ namespace Tests;
 
 use PDO;
 use PHPUnit\Framework\TestCase;
-use Waitmoonman\Database\Query\Connection;
+use Waitmoonman\Database\Schema\Connection;
 
 class ConnectTest extends TestCase
 {
