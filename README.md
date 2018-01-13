@@ -28,7 +28,13 @@
     
     
      // 增
-     DB::table('user')->insert(['user' => 'admin', 'pwd' => 'admin']);
+     $id = DB::table('users')->listenSql(
+         function($sql, $params, $realSql){
+             // do something
+             var_dump($realSql);
+         }
+         , true
+     )->insert(['name' => 'hello', 'email' => 'david@gmail.com', 'password' => '123456']);
      
      // 删
      DB::table('user')->where('user', '=', 'admin')->delete();
@@ -54,7 +60,9 @@
          ->get();
      
      // 改
-     DB::table('user')->where('user', '=', 'admin')->update(['pwd' => 'admin999', 'money' => 999]);
+     $rowNum = DB::table('users')
+         ->where('id', '>' ,1)
+         ->update(['name' => 'david']);
      
      
      // 分页

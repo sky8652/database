@@ -9,7 +9,7 @@ class Grammar implements DataBaseInterface
 {
     protected $builder;
 
-    protected $params;
+    protected $params = [];
 
     public function __construct(Builder $builder)
     {
@@ -27,15 +27,12 @@ class Grammar implements DataBaseInterface
 
     public function build($params = [])
     {
-        // 开始的参数处理
+        // 构建传入的参数处理
         $this->compileStartParams($params);
-
         // 拼接原生 SQL
         $sql = $this->toSql();
-
-        // 获取预处理 SQL 的参数
+        // 重组预处理 SQL 的参数（包括的where语句里的）
         $parameters = $this->compileParams();
-
 
         // 是否监听 SQL
         if (! empty($this->builder->listenHandle)) {
