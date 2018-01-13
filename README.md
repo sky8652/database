@@ -35,12 +35,22 @@
       
      // 查
      DB::find(1);
-     DB::table('user')
-         ->select(['user', 'pwd'])
-         ->where('money', '>', '-1')
-         ->AndWhere('login_count', '>', '-1')
-         ->orderBy('money', 'desc')
-         ->limit(2)
+     // 构造查询条件
+     $users = DB::table('users')
+         ->listenSql(
+                 function($sql, $params, $realSql){
+                     // do something
+                     var_dump($realSql);
+                 }
+                 , true
+         )
+         ->select('id', 'name', 'sex')
+         ->where('id', '>' ,1)
+         ->where('sex', 0)
+         ->offset(1)
+         ->limit(3)
+         ->orderBy('id')
+         ->orderBy('created_at', 'desc')
          ->get();
      
      // 改

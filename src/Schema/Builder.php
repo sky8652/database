@@ -74,7 +74,7 @@ class Builder
         return $this;
     }
 
-    public function orderBy($field, $order = 'ASC')
+    public function orderBy($field, $order = 'asc')
     {
         $this->orders[$field] = $order;
 

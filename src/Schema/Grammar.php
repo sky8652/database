@@ -19,8 +19,8 @@ class Grammar implements DataBaseInterface
     public function toSql()
     {
         $sql = $this->compileStart();
-
         $sql .= $this->compileWheres();
+        $sql .= $this->compileEnd();
 
         return $sql;
     }
@@ -35,7 +35,7 @@ class Grammar implements DataBaseInterface
 
 
         // 是否监听 SQL
-        if ($this->builder->listenHandle instanceof Closure) {
+        if (! empty($this->builder->listenHandle)) {
             $this->listenBuilderSql($sql, $parameters);
         }
 
@@ -63,12 +63,35 @@ class Grammar implements DataBaseInterface
         return $wheres;
     }
 
-    /**
-     * operate $this->table.
-     */
+
     protected function compileStart()
     {
         return '';
+    }
+
+    protected function compileEnd()
+    {
+        $end = '';
+
+        // 排序
+        if (! is_null($this->builder->orders)) {
+            $end .= ' order by ';
+            foreach ($this->builder->orders as $field => $order) {
+                $end .= "{$field} {$order},";
+            }
+            $end = rtrim($end, ',');
+        }
+
+        // 限制结果集
+        if (! is_null($this->builder->limit)) {
+            $end .= " limit ";
+            if (! is_null($this->builder->offset)) {
+                $end .= "{$this->builder->offset},";
+            }
+            $end .= $this->builder->limit;
+        }
+
+        return $end;
     }
 
     protected function compileParams()
@@ -93,17 +116,13 @@ class Grammar implements DataBaseInterface
 
     private function listenBuilderSql($sql, $parameters)
     {
-        if (empty($this->builder->listenHandle)) {
-            return false;
-        }
-
         $listenParams = [$sql, $parameters];
         // 需要拼接出货 SQL
         if ($this->builder->listenHandle['realSql']) {
             $listenParams[] = $this->getRealSql($sql, $parameters);
         }
 
-        call_user_func_array($this->builder->listenHandle['action'], );
+        call_user_func_array($this->builder->listenHandle['action'], $listenParams);
     }
 
     private function getRealSql($sql, $parameters)
@@ -118,7 +137,6 @@ class Grammar implements DataBaseInterface
             }
         }
 
-        var_dump($realSql);exit;
         return $realSql;
     }
 }
