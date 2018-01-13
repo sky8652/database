@@ -29,7 +29,7 @@ class Builder
 
     public $binds = [];
 
-    public $listenHandle;
+    public $listenHandle = [];
 
     protected $queryMethod = ['insert', 'delete', 'update', 'first', 'get', 'find'];
     protected $convergeMethod = ['count', 'max', 'min', 'sum'];
@@ -111,9 +111,11 @@ class Builder
     }
 
 
-    public function listenSql(Closure $closure)
+    public function listenSql(Closure $closure, $realSql = false)
     {
-        $this->listenHandle = $closure;
+
+        $this->listenHandle['action'] = $closure;
+        $this->listenHandle['realSql'] = $realSql;
 
         return $this;
     }
