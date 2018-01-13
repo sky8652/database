@@ -3,6 +3,7 @@
 namespace Waitmoonman\Database\Query;
 
 use PDO;
+use Waitmoonman\Database\Exceptions\QueryException;
 
 class Builder
 {
@@ -26,6 +27,8 @@ class Builder
     public $wheres = [];
 
     public $binds = [];
+
+    protected $method = ['insert', 'delete', 'update', 'first', 'get', 'find'];
 
     public function __construct(PDO $dbh)
     {
@@ -107,11 +110,13 @@ class Builder
 
     public function __call($method, $parameters)
     {
-        if (in_array($method, ['insert', 'delete', 'update', 'first', 'get', 'find'], true)) {
+        if (in_array($method, $this->method)) {
             $class = '\\Waitmoonman\\Database\\Foundation\\'.ucfirst($method);
 
             return (new $class($this))->build(...$parameters);
         }
+
+        throw new QueryException("NOT METHOD {$method}");
     }
 
     protected function initBuilder()

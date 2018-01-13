@@ -9,7 +9,7 @@ use Waitmoonman\Database\Query\Connection;
 class DB
 {
     protected static $instance;
-
+    protected static $connectFlag = false;
     protected $dbh;
 
     public static function addConnection(array $config)
@@ -17,6 +17,8 @@ class DB
         $instance = self::getInstance();
 
         $instance->dbh = (new Connection())->connect($config);
+
+        self::$connectFlag = true;
     }
 
     public static function table($table)
@@ -28,15 +30,6 @@ class DB
         return (new Builder($instance->dbh))->table($table);
     }
 
-    protected static function checkConnect()
-    {
-        $instance = self::getInstance();
-
-        if (is_null($instance->dbh)) {
-            throw new QueryException('请先配置数据库连接');
-        }
-    }
-
     protected static function getInstance()
     {
         if (is_null(self::$instance)) {
@@ -44,5 +37,12 @@ class DB
         }
 
         return self::$instance;
+    }
+
+    protected static function checkConnect()
+    {
+        if (! self::$connectFlag) {
+            throw new QueryException('请先配置数据库连接');
+        }
     }
 }
