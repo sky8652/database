@@ -76,11 +76,10 @@
      
      
      // 分页
-     $pages = DB::table('user')
-                 ->where('money', '>', 0)
-                 ->paginate(10);
-
-     // 获取可以直接使用的链接
-     $pages->links;
-     // 获取当前页的数据
-     $pages->data;
+     $users = DB::table('users')
+         ->select('id', 'name', 'email')
+         ->where('id', '>' ,4)
+         ->paginate(3);
+     
+     var_dump($users->data);
+     echo $users->links();

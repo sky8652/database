@@ -49,15 +49,26 @@ class Paginate extends Grammar
     {
         $this->page->page_size = $params[0];
 
+        // 页码
         if (isset($params[1])) {
             $this->page->curr_page = $params[1];
         } else {
             $this->page->curr_page = isset($_GET['page']) ? $_GET['page'] : 1;
         }
 
+        // 分页链接
+        $link = isset($params[2]) ? $params[2] : '';
+
+
+
         // 上一页 下一页
         $this->page->prev_page = $this->page->curr_page - 1;
         $this->page->next_page = $this->page->curr_page + 1;
+
+        // 上一页 下一页 的 URL
+        $this->page->prev_page_url = "{$link}?page={$this->page->prev_page}";
+        $this->page->next_page_url = "{$link}?page={$this->page->next_page}";
+        $this->page->url = $link;
 
         // 总页数
         $this->page->total = (new Count(clone $this->builder))->setAsName('count')->build()->count;
