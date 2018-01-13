@@ -5,9 +5,15 @@ use Waitmoonman\Database\DB;
 
 require 'vendor/autoload.php';
 
-DB::addConnection(require __DIR__ . '/config/database.php');
 
+try {
 
-$users = DB::table('users')->select('id', 'name', 'sex')->where('id', '>' ,1)->where('sex', 0)->get();
+    DB::addConnection(require __DIR__ . '/config/database.php');
+
+    $users = DB::table('users')->select('id', 'name', 'sex')->where('id', '>' ,1)->where('sex', 0)->max();
+
+} catch (\Waitmoonman\Database\Exceptions\QueryException $e) {
+    var_dump($e->getMessage());exit;
+}
 
 var_dump($users);

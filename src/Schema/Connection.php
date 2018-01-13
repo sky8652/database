@@ -1,6 +1,6 @@
 <?php
 
-namespace Waitmoonman\Database\Query;
+namespace Waitmoonman\Database\Schema;
 
 use PDO;
 use PDOException;

@@ -1,9 +1,8 @@
 <?php
 
-namespace Waitmoonman\Database\Foundation;
+namespace Waitmoonman\Database\Schema;
 
 use Waitmoonman\Database\Contracts\DataBaseInterface;
-use Waitmoonman\Database\Query\Builder;
 
 abstract class Grammar implements DataBaseInterface
 {
@@ -68,7 +67,6 @@ abstract class Grammar implements DataBaseInterface
 
     protected function compileParams()
     {
-        var_dump(array_merge($this->builder->binds));
         /*
          * 条件的参数先，然后再到后面的参数
          * Builder->where('sex', 1)->update($param);

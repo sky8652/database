@@ -3,8 +3,8 @@
 namespace Waitmoonman\Database;
 
 use Waitmoonman\Database\Exceptions\QueryException;
-use Waitmoonman\Database\Query\Builder;
-use Waitmoonman\Database\Query\Connection;
+use Waitmoonman\Database\Schema\Builder;
+use Waitmoonman\Database\Schema\Connection;
 
 class DB
 {

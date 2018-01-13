@@ -1,6 +1,6 @@
 <?php
 
-namespace Waitmoonman\Database\Query;
+namespace Waitmoonman\Database\Schema;
 
 use PDO;
 use Waitmoonman\Database\Exceptions\QueryException;
@@ -28,7 +28,8 @@ class Builder
 
     public $binds = [];
 
-    protected $method = ['insert', 'delete', 'update', 'first', 'get', 'find'];
+    protected $queryMethod = ['insert', 'delete', 'update', 'first', 'get', 'find'];
+    protected $convergeMethod = ['count', 'max', 'min', 'sum'];
 
     public function __construct(PDO $dbh)
     {
@@ -110,13 +111,18 @@ class Builder
 
     public function __call($method, $parameters)
     {
-        if (in_array($method, $this->method)) {
-            $class = '\\Waitmoonman\\Database\\Foundation\\'.ucfirst($method);
-
-            return (new $class($this))->build(...$parameters);
+        $class = '\\Waitmoonman\\Database';
+        if (in_array($method, $this->convergeMethod)) {
+            $class .= '\\Functions\\';
+        }elseif (in_array($method, $this->queryMethod)) {
+            $class .= '\\Foundation\\';
+        } else {
+            throw new QueryException("方法 [{$method}] 不存在");
         }
 
-        throw new QueryException("NOT METHOD {$method}");
+        $class .= ucfirst($method);
+        return (new $class($this))->build(...$parameters);
+
     }
 
     protected function initBuilder()

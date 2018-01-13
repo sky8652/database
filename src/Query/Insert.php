@@ -2,6 +2,8 @@
 
 namespace Waitmoonman\Database\Foundation;
 
+use Waitmoonman\Database\Schema\Grammar;
+
 class Insert extends Grammar
 {
     public function toSql()
