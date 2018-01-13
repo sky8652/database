@@ -37,7 +37,17 @@
      )->insert(['name' => 'hello', 'email' => 'david@gmail.com', 'password' => '123456']);
      
      // 删
-     DB::table('user')->where('user', '=', 'admin')->delete();
+     $rowNum = DB::table('users')
+         ->listenSql(
+             function($sql, $params, $realSql){
+                 // do something
+                 var_dump($realSql);
+             }
+             , true
+         )
+         ->where('id', '>' ,10)
+         ->where('login_count', 0)
+         ->delete();
       
      // 查
      DB::find(1);

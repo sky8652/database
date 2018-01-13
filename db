@@ -9,12 +9,16 @@ require 'vendor/autoload.php';
 DB::addConnection(require __DIR__ . '/config/database.php');
 
 // 构造查询条件
-$users = DB::table('users')->listenSql(
-    function($sql, $params, $realSql){
-        // do something
-        var_dump($realSql);
-    }
-    , true
-)->insert(['name' => 'hello', 'email' => 'david@gmail.com', 'password' => '123456']);
+$users = DB::table('users')
+    ->listenSql(
+        function($sql, $params, $realSql){
+            // do something
+            var_dump($realSql);
+        }
+        , true
+    )
+    ->where('id', '>' ,10)
+    ->where('login_count', 0)
+    ->delete();
 
 var_dump($users);

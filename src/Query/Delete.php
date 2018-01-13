@@ -7,5 +7,10 @@ use Waitmoonman\Database\Schema\Grammar;
 
 class Delete extends Grammar
 {
-    protected $builder;
+    public function compileStart()
+    {
+        $start = "delete from {$this->builder->from} ";
+
+        return $start;
+    }
 }
