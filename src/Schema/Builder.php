@@ -2,6 +2,7 @@
 
 namespace Waitmoonman\Database\Schema;
 
+use Closure;
 use PDO;
 use Waitmoonman\Database\Exceptions\QueryException;
 
@@ -27,6 +28,8 @@ class Builder
     public $wheres = [];
 
     public $binds = [];
+
+    public $listenHandle;
 
     protected $queryMethod = ['insert', 'delete', 'update', 'first', 'get', 'find'];
     protected $convergeMethod = ['count', 'max', 'min', 'sum'];
@@ -97,28 +100,37 @@ class Builder
         return $this->primaryKey ?: 'id';
     }
 
-    public function execute($sql, $parameters = [])
+    public function getExecuteResults($sql, $parameters = [])
     {
+        // 预处理 SQL
         $statement = $this->dbh->prepare($sql);
-
-        // 重置参数的键
-        $parameters = array_values($parameters);
-
+        // 执行预处理语句
         $statement->execute($parameters);
-
+        // 获取返回结果集
         return $statement->fetchAll(PDO::FETCH_OBJ);
+    }
+
+
+    public function listenSql(Closure $closure)
+    {
+        $this->listenHandle = $closure;
+
+        return $this;
     }
 
     public function __call($method, $parameters)
     {
         $class = '\\Waitmoonman\\Database';
+
+
         if (in_array($method, $this->convergeMethod)) {
             $class .= '\\Functions\\';
         }elseif (in_array($method, $this->queryMethod)) {
-            $class .= '\\Foundation\\';
-        } else {
+            $class .= '\\Query\\';
+        }else {
             throw new QueryException("方法 [{$method}] 不存在");
         }
+
 
         $class .= ucfirst($method);
         return (new $class($this))->build(...$parameters);
@@ -129,4 +141,6 @@ class Builder
     {
         $this->columns = ['*'];
     }
+
+
 }

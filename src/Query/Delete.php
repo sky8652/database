@@ -1,6 +1,6 @@
 <?php
 
-namespace Waitmoonman\Database\Foundation;
+namespace Waitmoonman\Database\Query;
 
 
 use Waitmoonman\Database\Schema\Grammar;

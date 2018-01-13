@@ -2,9 +2,10 @@
 
 namespace Waitmoonman\Database\Schema;
 
+use Closure;
 use Waitmoonman\Database\Contracts\DataBaseInterface;
 
-abstract class Grammar implements DataBaseInterface
+class Grammar implements DataBaseInterface
 {
     protected $builder;
 
@@ -24,17 +25,22 @@ abstract class Grammar implements DataBaseInterface
         return $sql;
     }
 
-    public function build($param = [])
+    public function build($params = [])
     {
-        $param = $this->buildParam($param);
-
         // 拼接原生 SQL
         $sql = $this->toSql();
 
         // 获取预处理 SQL 的参数
-        $param = $this->compileParams();
+        $parameters = $this->compileParams();
 
-        $results = $this->builder->execute($sql, $param);
+
+        // 是否监听 SQL
+        if ($this->builder->listenHandle instanceof Closure) {
+            call_user_func_array($this->builder->listenHandle, [$sql, $parameters]);
+        }
+
+        // 执行 SQL 运行
+        $results = $this->builder->getExecuteResults($sql, $parameters);
 
         return $results;
     }
@@ -71,7 +77,7 @@ abstract class Grammar implements DataBaseInterface
          * 条件的参数先，然后再到后面的参数
          * Builder->where('sex', 1)->update($param);
          */
-        return $this->builder->binds;
+        return $this->builder->binds = array_values($this->builder->binds);
     }
 
     protected function buildParam($param)
