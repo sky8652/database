@@ -7,18 +7,3 @@ require 'vendor/autoload.php';
 
 // 初始化数据库连接
 DB::addConnection(require __DIR__ . '/config/database.php');
-
-// 构造查询条件
-$users = DB::table('users')
-    ->listenSql(
-        function($sql, $params, $realSql){
-            // do something
-            var_dump($realSql);
-        }
-        , true
-    )
-    ->select('id', 'name', 'email')
-    ->where('id', '>' ,4)
-    ->paginate(3);
-
-var_dump($users);

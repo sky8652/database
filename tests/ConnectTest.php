@@ -2,20 +2,16 @@
 
 namespace Tests;
 
-use PDO;
 use PHPUnit\Framework\TestCase;
-use Waitmoonman\Database\Schema\Connection;
+use Waitmoonman\Database\DB;
 
 class ConnectTest extends TestCase
 {
     public function testConnect()
     {
-        $config = require_once __DIR__ . '/../config/database.php';
+        $user = DB::table('users')->first();
 
-        $dbh = (new Connection())->connect($config);
-
-        $this->assertInstanceOf(PDO::class, $dbh);
-
-        return $dbh;
+        $this->assertTrue((bool) $user);
     }
+
 }
