@@ -17,6 +17,7 @@ $users = DB::table('users')
         }
         , true
     )
-    ->find([1, 2, 3]);
+    ->where('id', '>' ,1)
+    ->find(1);
 
 var_dump($users);

@@ -51,7 +51,7 @@
       
      // 查 ->find(1);
      $users = DB::table('users')->find([1, 2, 3]);
-     // 构造查询条件
+     $user = DB::table('users')->where('id', '>' ,1)->first();
      $users = DB::table('users')
          ->listenSql(
                  function($sql, $params, $realSql){

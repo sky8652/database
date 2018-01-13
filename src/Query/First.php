@@ -10,15 +10,11 @@ class First extends Grammar
 {
     use Query;
 
-    public function toSql()
+    public function compileEnd()
     {
-        // TODO 动态拼接 update delete insert into
-        $sql = $this->compileStart();
+        // 设置返回的条数
+        $this->builder->limit(1);
 
-        $sql .= $this->compileWheres();
-
-        $sql .= ' limit 1';
-
-        return $sql;
+        return parent::compileEnd();
     }
 }

@@ -1,0 +1,7 @@
+[13-Jan-2018 05:28:36 UTC] PHP Fatal error:  Uncaught Waitmoonman\Database\Exceptions\QueryException: 无效的执行操作 in F:\phpStudy\WWW\DB\src\Schema\Builder.php:125
+Stack trace:
+#0 F:\phpStudy\WWW\DB\src\Schema\Grammar.php(44): Waitmoonman\Database\Schema\Builder->getExecuteResults('select * from u...', Array, 'first')
+#1 F:\phpStudy\WWW\DB\src\Schema\Builder.php(156): Waitmoonman\Database\Schema\Grammar->build()
+#2 F:\phpStudy\WWW\DB\db(21): Waitmoonman\Database\Schema\Builder->__call('first', Array)
+#3 {main}
+  thrown in F:\phpStudy\WWW\DB\src\Schema\Builder.php on line 125
