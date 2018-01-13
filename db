@@ -17,8 +17,6 @@ $users = DB::table('users')
         }
         , true
     )
-    ->where('id', '>' ,10)
-    ->where('login_count', 0)
-    ->delete();
+    ->find([1, 2, 3]);
 
 var_dump($users);

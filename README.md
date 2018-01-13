@@ -49,8 +49,8 @@
          ->where('login_count', 0)
          ->delete();
       
-     // 查
-     DB::find(1);
+     // 查 ->find(1);
+     $users = DB::table('users')->find([1, 2, 3]);
      // 构造查询条件
      $users = DB::table('users')
          ->listenSql(
@@ -84,44 +84,3 @@
      $pages->links;
      // 获取当前页的数据
      $pages->data;
-
-/********************************************
- *  API 文档
- * 
- *  // 初始化数据库配置，参数必须完整
- *  DB::initConfig($config);
- * 
- *  // 获取 DB 实例
- *  DB DB::table(string $table_name);
- * 
- *  // 增 参数为 字段=>值 数组, 如 ['field' => 'value'], 成功返回插入后的 id,失败返回 false
- *  int DB::table(string $table_name)->insert(array $param);
- * 
- *  // 删 , 可链式操作， 返回受影响的行数
- *  int DB::table(string $table_name)->delete();
- * 
- *  // 查 find() 通常情况下传入 ID 便可，成功返回一维数组，失败返回 false
- *  array DB::table(string $table_name)->find(int $id [, string $primary]);
- *  // 查 可链式操作，成功返二维数组，失败返回 false
- *  array DB::table(string $table_name)->get();
- *  
- *  // 改, 可链式操作，参数为 字段=>值 数组, 如 ['field' => 'value'], 返回受影响的行数
- *  int DB::table(string $table_name)->update(array $param);
- * 
- *  // 分页 可链式操作， 参数为每页的记录条数，返回 StdClass 对象
- *  StdClass DB::table(string $table_name)->paginate(int $pageCount);
- *  // 返回的对象包含
- *  total=> 总记录条数
- *  page_size=> 每页记录数
- *  last_page=> 总共页数
- *  prev_page=> 上一页页码
- *  curr_page=> 当前页页码
- *  next_page=> 下一页页码
- *  next_page_url=> 上一页URL
- *  prev_page_url=> 下一页URL
- *  url=>           当前的URL
- *  links=>         生成兼容 bootstrap 的分页（可直接输出使用） 
- *  data=>          当前页的数据(数组形式，遍历)
- * 
-*/
-```

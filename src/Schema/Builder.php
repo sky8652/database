@@ -110,6 +110,7 @@ class Builder
         // 根据操作返回对应的结果
         switch ($method) {
             case 'query':
+            case 'find':
                 // 获取返回结果集rowCount
                 return $statement->fetchAll(PDO::FETCH_OBJ);
                 break;

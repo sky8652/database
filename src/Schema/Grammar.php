@@ -107,6 +107,10 @@ class Grammar implements DataBaseInterface
 
     protected function compileStartParams($params)
     {
+        if (! is_array($params)) {
+            $params = (array) $params;
+        }
+
         foreach ($params as $key => $param) {
             $this->params[$key] = $param;
             // 执行时只需要用值，不需要 key
