@@ -25,7 +25,7 @@ class Grammar implements DataBaseInterface
         return $sql;
     }
 
-    public function build($params = [])
+    public function build(...$params)
     {
         // 构建传入的参数处理
         $this->compileStartParams($params);

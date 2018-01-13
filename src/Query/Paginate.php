@@ -9,14 +9,11 @@ class Paginate extends Grammar
 {
     use Query;
 
-    public function toSql()
+    /**
+     *
+     */
+    public function build(...$params)
     {
-        $sql = $this->compileStart();
 
-        $sql .= $this->compileWheres();
-
-        $sql .= ' limit 1';
-
-        return $sql;
     }
 }

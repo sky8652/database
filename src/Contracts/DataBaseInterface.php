@@ -6,5 +6,5 @@ interface DataBaseInterface
 {
     public function toSql();
 
-    public function build($params = []);
+    public function build(...$parameters);
 }

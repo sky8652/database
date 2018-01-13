@@ -31,7 +31,7 @@ class Builder
 
     public $listenHandle = [];
 
-    protected $queryMethod = ['insert', 'delete', 'update', 'first', 'get', 'find'];
+    protected $queryMethod = ['insert', 'delete', 'update', 'first', 'get', 'find', 'paginate'];
     protected $convergeMethod = ['count', 'max', 'min', 'sum'];
 
     public function __construct(PDO $dbh)
