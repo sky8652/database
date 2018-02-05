@@ -2,6 +2,7 @@
 <?php
 
 use Waitmoonman\Database\DB;
+use Waitmoonman\Database\Exceptions\QueryException;
 
 require 'vendor/autoload.php';
 
@@ -10,5 +11,9 @@ DB::addConnection(
     require __DIR__ . '/config/database.php'
 );
 
-
-var_dump(DB::table('users')->where('id', 1)->update(['asdf' => 'adsf']));
+// 开启一个事务，第一个闭包是正常执行的代码，第二个闭包是发生异常时执行的代码
+DB::beginTransaction(function () {
+    DB::table('users')->where('id', 1)->update(['asdf' => 'adsf']);
+}, function (PDOException $e) {
+    var_dump($e->getMessage());
+});

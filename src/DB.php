@@ -23,38 +23,46 @@ class DB
         self::$connectFlag = true;
     }
 
-    public function beginTransaction($closure = null)
+    public static function beginTransaction(Closure $closure, Closure $rollBack)
     {
-        $this->dbh->beginTransaction();
+       self::getPdo()->beginTransaction();
 
         if ($closure instanceof Closure) {
             try {
                 $closure();
-                $this->commit();
+                self::commit();
             } catch (PDOException $e) {
-                $this->rollBack();
-                throw new QueryException($e->getMessage());
+                self::rollBack();
+                $rollBack($e);
             }
         }
     }
 
-    public function commit()
+    public static function commit()
     {
-        $this->dbh->commit();
+        self::getPdo()->commit();
     }
 
-    public function rollBack()
+    public static function rollBack()
     {
-        $this->dbh->rollBack();
+        self::getPdo()->rollBack();
     }
 
     public static function table($table)
     {
         self::checkConnect();
 
-        $instance = self::getInstance();
+        return (
+            new Builder(
+                self::getPdo()
+            )
+        )->table($table);
+    }
 
-        return (new Builder($instance->dbh))->table($table);
+    public static function getPdo()
+    {
+        $instance = self::getInstance();
+        return $instance->dbh;
     }
 
     protected static function getInstance()
