@@ -31,7 +31,9 @@ class Connection
         ];
 
         try {
-            return new PDO($dsn, $username, $password);
+            $dbh = new PDO($dsn, $username, $password);
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $dbh;
         } catch (PDOException $e) {
             throw new QueryException($e->getMessage());
         }

@@ -1,14 +1,14 @@
 {
-    "name": "waitmoonman/db",
+    "name": "davidnineroc/db",
     "description": "this is a database operation class, query the constructor!",
-    "keywords": ["waitmoonman", "db", "database", "Query Builder", "mysql", "PDO", "数据库", "数据库操作类", "查询构造器"],
+    "keywords": ["davidnineroc", "db", "database", "Query Builder", "mysql", "PDO", "数据库", "数据库操作类", "查询构造器"],
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "WaitMoonMan",
+            "name": "davidnineroc",
             "email": "1033404553@qq.com",
-            "homepage": "https://waitmoonman.github.io"
+            "homepage": "https://davidnineroc.github.io"
         }
     ],
     "minimum-stability": "dev",

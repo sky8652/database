@@ -6,4 +6,9 @@ use Waitmoonman\Database\DB;
 require 'vendor/autoload.php';
 
 // 初始化数据库连接
-DB::addConnection(require __DIR__ . '/config/database.php');
+DB::addConnection(
+    require __DIR__ . '/config/database.php'
+);
+
+
+var_dump(DB::table('users')->where('id', 1)->update(['asdf' => 'adsf']));

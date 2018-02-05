@@ -28,7 +28,7 @@ class Grammar implements DataBaseInterface
     public function build(...$params)
     {
         // 构建传入的参数处理
-        $this->compileStartParams($params);
+        $this->compileStartParams(...$params);
         // 拼接原生 SQL
         $sql = $this->toSql();
         // 重组预处理 SQL 的参数（包括的where语句里的）
@@ -56,12 +56,10 @@ class Grammar implements DataBaseInterface
         $wheres = 'where ';
         foreach ($this->builder->wheres as $where) {
             $wheres .= "{$where['column']} {$where['operator']} ? and ";
-            $this->builder->binds[] = $where['value'];
+            $this->builder->binds[$where['column']] = $where['value'];
         }
 
-        $wheres = rtrim($wheres, 'and ');
-
-        return $wheres;
+        return rtrim($wheres, 'and ');
     }
 
 
@@ -101,7 +99,7 @@ class Grammar implements DataBaseInterface
          * 条件的参数先，然后再到后面的参数
          * Builder->where('sex', 1)->update($param);
          */
-        return $this->builder->binds = array_values($this->builder->binds);
+        return $this->builder->binds;
     }
 
 
@@ -111,10 +109,12 @@ class Grammar implements DataBaseInterface
             $params = (array) $params;
         }
 
+
         foreach ($params as $key => $param) {
             $this->params[$key] = $param;
+
             // 执行时只需要用值，不需要 key
-            $this->builder->binds[] = $param;
+            $this->builder->binds[$key] = $param;
         }
     }
 

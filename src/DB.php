@@ -2,6 +2,8 @@
 
 namespace Waitmoonman\Database;
 
+use Closure;
+use PDOException;
 use Waitmoonman\Database\Exceptions\QueryException;
 use Waitmoonman\Database\Schema\Builder;
 use Waitmoonman\Database\Schema\Connection;
@@ -19,6 +21,31 @@ class DB
         $instance->dbh = (new Connection())->connect($config);
 
         self::$connectFlag = true;
+    }
+
+    public function beginTransaction($closure = null)
+    {
+        $this->dbh->beginTransaction();
+
+        if ($closure instanceof Closure) {
+            try {
+                $closure();
+                $this->commit();
+            } catch (PDOException $e) {
+                $this->rollBack();
+                throw new QueryException($e->getMessage());
+            }
+        }
+    }
+
+    public function commit()
+    {
+        $this->dbh->commit();
+    }
+
+    public function rollBack()
+    {
+        $this->dbh->rollBack();
     }
 
     public static function table($table)
