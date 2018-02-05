@@ -23,7 +23,7 @@ class DB
         self::$connectFlag = true;
     }
 
-    public static function beginTransaction(Closure $closure, Closure $rollBack)
+    public static function beginTransaction(Closure $closure = null, Closure $rollBack = null)
     {
        self::getPdo()->beginTransaction();
 

@@ -27,6 +27,10 @@ class Grammar implements DataBaseInterface
 
     public function build(...$params)
     {
+        if (empty($params)) {
+            $params = [[]];
+        }
+
         // 构建传入的参数处理
         $this->compileStartParams(...$params);
         // 拼接原生 SQL
